@@ -61,7 +61,34 @@ h1, h2, h4, h5, p, li, div {
 }
 /*changed h5 to div, added margin*/
 
+.description {
+  margin: 10px 0px 0px 0px;
+}
+/*added description class to p tags, added margin*/
+
 /*contact info, skills, education*/
 ul {
   font-size: 1.1em;
 }
+
+.menu {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+/*added margin, padding, text-align to contact info list*/
+
+.menuitems {
+  display: inline;
+}
+/*styled contact info items*/
+
+#degrees {
+  margin: 5px 0px 0px 0px;
+}
+/*added margin to education list*/
+
+#do {
+  margin: 5px 0px 0px 0px;
+}
+/*added margin to skills list*/
