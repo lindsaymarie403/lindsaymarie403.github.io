@@ -92,3 +92,31 @@ ul {
   margin: 5px 0px 0px 0px;
 }
 /*added margin to skills list*/
+
+.job {
+  margin: 0px 0px 20px 0px;
+}
+/*added margin to container for each job*/
+
+#experience {
+  margin: 0px 0px 20px 0px;
+}
+/*added margin to experience container*/
+
+#education {
+  margin: 0px 0px 20px 0px;
+}
+/*added margin to education container*/
+
+#skills {
+  margin: 0px 0px 20px 0px;
+}
+/*added margin to skills container*/
+
+#top {
+  margin: 0px 0px 35px 0px;
+}
+
+#bottom {
+  margin: 0px 0px 0px 10px;
+}
