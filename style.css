@@ -88,6 +88,11 @@ ul {
 }
 /*styled contact info items*/
 
+.menu a {
+  color: #444;
+  text-decoration: none;
+}
+
 #degrees {
   margin: 5px 0px 0px 0px;
 }
@@ -158,3 +163,16 @@ ul {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 /*added styles for all three sections*/
+
+#degrees, #do {
+  margin-left: 4%;
+  width: 65%;
+  float: left;
+  list-style: none;
+  -webkit-padding-start: 21px;
+  border-left: 1px solid rgba(253,176,32,0.3);
+}
+
+#degrees li, #do li {
+  margin-bottom: 3px;
+}
