@@ -181,12 +181,44 @@ ul {
 
 /*extra small devices, phones*/
 @media only screen and (max-width: 767px) {
-
+  #top {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  #bottom {
+    top: 0px;
+  }
+  #name {
+    font-size: 3em;
+  }
+  .alljobs {
+    width: 100%;
+    margin: 0px;
+    border-left: 0px;
+    padding: 10px;
+  }
+  .sectionheader {
+    margin: 10px auto 15px auto;
+    padding: 5px 10px 5px 10px;
+    width: 97%;
+    min-width: 0px;
+    float: none;
+  }
+  #degrees, #do {
+    margin: 15px 2% 0px 2%;
+    padding: 0px 20px 0px 20px;
+    width: 100%;
+    float: none;
+    -webkit-padding-start: 0px;
+    border-left: 0px;
+  }
 }
 
 /*small devices, tablets*/
 @media only screen and (min-width: 768px) and (max-width: 991px){
-
+  #name {
+    font-size: 3.6em;
+  }
 }
 
 /*medium devices, desktops*/
