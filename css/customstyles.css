@@ -10,6 +10,12 @@ div {
   /*border: 1px solid #ccc;*/
 }
 
+/*margins below all content sections*/
+
+#experience, #education, #skills, #honors {
+  margin-bottom: 30px;
+}
+
 .navbar {
   background-color: #2f2f3d;
   border: none;
@@ -46,11 +52,16 @@ div {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 1.2em;
+  color: #2f2f3d;
   margin: 25px 0px 15px 0px;
 }
 
-.job {
-  padding: 0px;
+/*job styles*/
+
+.job, .school, .skill {
+  padding: 0px 0px 20px 0px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #d6d6d6;
 }
 
 .job-title {
@@ -69,19 +80,43 @@ div {
 .job-years-large, .job-years-small {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+  text-transform: uppercase;
   font-size: .9em;
 }
-
-.job-text {
+/*all body copy grouped here*/
+.job-text, .school-text, .skill-text {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #5b5b5b;
 }
 
-.job-company, .job-years-large, .job-years-small, .job-text {
+.job-company, .job-years-large, .job-years-small, .job-text, .school-degree, .school-text {
   margin-bottom: 10px;
 }
 
+/*school styles*/
+
+.school-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+.school-degree {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+/*skill styles*/
+.skill-title {
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: .9em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
 
 /*media queries*/
 /*allowing job years to move at 992px*/
