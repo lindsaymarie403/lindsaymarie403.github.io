@@ -225,47 +225,7 @@ nav bar styles
   color: #5b5b5b;
   display: inline;
   margin-right: 10px;
-  line-height: 1.5em;
-}
-
-/*activities styles*/
-#activities {
-  width: 100%;
-  background-color: #23232d;
-  padding: 50px 0 50px 0;
-}
-
-#activities-row {
-  margin: auto;
-}
-
-#activities-tag {
-  font-family: 'Lato', sans-serif;
-  font-weight: 900;
-  font-size: 1.2em;
-  color: #575670;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-bottom: 30px;
-}
-
-.activity-name {
-  font-family: 'Merriweather', serif;
-  font-size: 1.1em;
-  color: #a5a4b2;
-  margin-bottom: 10px;
-}
-
-.activity-text {
-  font-family: 'Lato', sans-serif;
-  font-size: 1em;
-  color: #a5a4b2;
-  margin-bottom: 10px;
-}
-
-.title {
-  color: #e8e8e8;
+  line-height: 1.8em;
 }
 
 /*share styles*/
@@ -300,12 +260,69 @@ nav bar styles
 
 #share-list a:link, #share-list a:visited {
   color: #575670;
+  text-decoration: none;
 }
 
 #share-list a:hover {
   color: #8280a3;
   text-decoration: none;
 }
+
+/*activities styles*/
+#activities {
+  width: 100%;
+  background-color: #23232d;
+  padding: 50px 0 50px 0;
+}
+
+#activities-row {
+  margin: auto;
+}
+
+#activities-tag {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #575670;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.activity-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  color: #a5a4b2;
+  margin-bottom: 10px;
+}
+
+.activity-text a {
+  text-decoration: none;
+}
+
+.activity-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #dddddd;
+}
+
+a:hover .title {
+  color: #FFF;
+}
+
+.author {
+  color: #9e9daa;
+}
+
+a:hover .author {
+  color: #b5b4c1;
+}
+
 
 /*footer styles*/
 #footer {
