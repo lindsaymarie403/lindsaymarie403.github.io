@@ -22,7 +22,7 @@ nav bar styles
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #FFF;
+  color: #FFF!Important;
 }
 
 .navbar-collapse {
