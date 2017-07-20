@@ -10,11 +10,7 @@ div {
   /*border: 1px solid #ccc;*/
 }
 
-/*margins below all content sections*/
-
-#experience, #education, #skills, #honors {
-  margin-bottom: 30px;
-}
+/*nav bar styles*/
 
 .navbar {
   background-color: #23232d;
@@ -40,17 +36,77 @@ div {
   letter-spacing: 1px;
 }
 
+/*hero styles*/
 #hero-container {
   width: 100%;
-  height: 300px;
-  background-color: #414154;
+  height: 500px;
+  background-color: #575670;
   overflow: hidden;
+  position: relative;
+  z-index: -1;
 }
 
 #hero-container img {
-  width: 60%;
+  width: 66%;
+  max-width: 900px;
 }
 
+/*hero text*/
+#hero-row {
+  position: absolute;
+  z-index: 2;
+  top: 125px;
+}
+
+#hero-col {
+  max-width: 1000px;
+}
+
+#hero-title {
+  font-family: 'Merriweather', sans-serif;
+  font-size: 2em;
+  color: #FFF;
+  margin-bottom: 20px;
+}
+
+#hero-text {
+  font-family: 'Merriweather', sans-serif;
+  font-style: italic;
+  color: #FFF;
+  line-height: 2em;
+}
+
+/*limiting all content to 1000px*/
+.container {
+  max-width: 1000px;
+}
+
+/*white container for resume content*/
+#resume {
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+  margin: 0px auto 0px auto;
+  top: -50px;
+  padding: 10px 30px 10px 30px;
+}
+
+/*margins below all content sections*/
+#experience, #education, #skills, #honors {
+  margin-bottom: 30px;
+}
+
+/*borders for section dividers (education and skills turned on in media queries)*/
+#experience {
+  border-bottom: 1px solid #e8e8e8;
+}
+
+#honors {
+  border-top: 1px solid #e8e8e8;
+  padding-top: 15px;
+}
+
+/*top of each section*/
 .section-header {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
@@ -61,6 +117,13 @@ div {
   margin: 25px 0px 15px 0px;
 }
 
+.dash {
+  width: 15px;
+  height: 3px;
+  background-color: #23232d;
+  margin: 5px 0px 20px 15px;
+}
+
 /*styles for job, school and skill containers*/
 .job, .school, .skill {
   padding: 0px 0px 20px 0px;
@@ -68,7 +131,7 @@ div {
 
 /*job styles*/
 .job {
-  border-bottom: 1px solid #d6d6d6;
+  /*border-bottom: 1px solid #d6d6d6;*/
   margin-bottom: 20px;
 }
 
@@ -132,10 +195,6 @@ div {
 }
 
 /*honor styles*/
-#honors {
-  border-top: 1px solid #d6d6d6;
-}
-
 #honor-list {
   list-style-type: none;
   padding: 0px;
@@ -151,6 +210,73 @@ div {
   line-height: 1.5em;
 }
 
+/*activities styles*/
+#activities {
+  width: 100%;
+  background-color: #23232d;
+  padding: 50px 0 50px 0;
+}
+
+#activities-row {
+  margin: auto;
+}
+
+#activities-tag {
+  font-family: 'Lato', sans-serif;
+  font-weight: 900;
+  font-size: 1.2em;
+  color: #575670;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+}
+
+.activity-name {
+  font-family: 'Merriweather', serif;
+  font-size: 1.1em;
+  color: #a5a4b2;
+  margin-bottom: 10px;
+}
+
+.activity-text {
+  font-family: 'Lato', sans-serif;
+  font-size: 1em;
+  color: #a5a4b2;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: #e8e8e8;
+}
+
+/*footer styles*/
+#footer {
+  background-color: #575670;
+  padding: 20px 0 20px 0;
+}
+
+#footer .row {
+  margin: auto;
+}
+
+#copyright, #built {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  color: #a5a4b2;
+}
+
+#copyright {
+  text-transform: uppercase;
+  font-size: .8em;
+  letter-spacing: 1px;
+}
+
+#built {
+  text-align: right;
+  font-size: .8em;
+}
+
 /*media queries*/
 /*allowing job years to move at 992px*/
 @media only screen and (max-width: 991px) {
@@ -162,5 +288,40 @@ div {
 @media only screen and (min-width: 992px) {
   .job-years-small {
     display: none;
+  }
+}
+
+/*regular media queries:
+- adjusting the hero container,
+- adding line below education when stacked  */
+
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+
+  #hero-container img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 991px) and (min-width: 768px) {
+  #hero-container {
+    height: 300px;
+  }
+  #hero-container img {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #hero-container {
+    height: 300px;
+  }
+  #hero-container img {
+    display: none;
+  }
+  .activity-name {
+    margin-top: 30px;
+  }
+  #built {
+    text-align: left;
   }
 }
