@@ -268,6 +268,45 @@ nav bar styles
   color: #e8e8e8;
 }
 
+/*share styles*/
+#share {
+  margin-bottom: 40px;
+}
+
+#share-title {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  font-size: 1.2em;
+  font-style: italic;
+  text-transform: none;
+}
+
+#share-list {
+  list-style-type: none;
+  padding: 0;
+  text-align: center;
+  color: #5b5b5b;
+}
+
+#share-list li {
+  display: inline;
+  margin-left: 15px;
+  font-family: 'Lato', sans-serif;
+  font-weight: 600;
+  font-size: .9em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#share-list a:link, #share-list a:visited {
+  color: #575670;
+}
+
+#share-list a:hover {
+  color: #8280a3;
+  text-decoration: none;
+}
+
 /*footer styles*/
 #footer {
   background-color: #575670;
