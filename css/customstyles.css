@@ -46,11 +46,6 @@ div {
   z-index: -1;
 }
 
-#hero-container img {
-  width: 66%;
-  max-width: 900px;
-}
-
 /*hero text*/
 #hero-row {
   position: absolute;
@@ -171,7 +166,6 @@ div {
 }
 
 /*school styles*/
-
 .school-title {
   font-family: 'Lato', sans-serif;
   font-weight: 600;
@@ -293,7 +287,15 @@ div {
 
 /*regular media queries:
 - adjusting the hero container,
-- adding line below education when stacked  */
+- adding line below education when stacked
+- aligning footer text at xs  */
+
+@media only screen and (min-width: 1200px) {
+  #hero-container img {
+    width: 70%;
+    max-width: 1000px;
+  }
+}
 
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
 
@@ -323,5 +325,8 @@ div {
   }
   #built {
     text-align: left;
+  }
+  #education {
+    border-bottom: 1px solid #e8e8e8;
   }
 }
