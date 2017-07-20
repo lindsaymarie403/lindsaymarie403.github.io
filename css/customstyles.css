@@ -51,8 +51,12 @@ nav bar styles
 }
 
 .icon {
-  margin-right: 10px;
+  margin-right: 12px;
   color: #23232d;
+}
+
+a:hover .icon {
+  color: #000000;
 }
 
 /*hero text*/
