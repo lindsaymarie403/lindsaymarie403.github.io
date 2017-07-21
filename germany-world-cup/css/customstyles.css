@@ -1,0 +1,86 @@
+/* No CSS Reset with Bootstrap */
+/*These initial styles come from here: http://getbootstrap.com/examples/starter-template/starter-template.css*/
+
+body {
+  padding-top: 50px;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  font-size: 12px;
+}
+
+div {
+  /*border: 1px solid red;*/
+}
+
+.topsection {
+  text-align: center;
+  margin: 20px 0px 0px 0px;
+}
+
+.topsection h1 {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+.byline {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #777;
+  margin: 15px 0px 20px 0px;
+  font-style: italic;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.lead {
+  font-size: 1.75rem;
+}
+
+.graphiccontainer {
+  margin: 0px 0px 20px 0px;
+  padding: 20px;
+}
+
+.textblock {
+  margin: 0px 20px 0px 0px;
+  padding: 0px 20px 0px 20px;
+}
+
+.graphictitle h2 {
+  font-size: 2.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.graphictext {
+  margin: 15px 0px 0px 0px;
+}
+
+.graphictext p {
+  font-size: 1.35rem;
+}
+
+.graphicblock {
+  padding: 0px 20px 0px 20px;
+  border-left: 2px solid #777;
+}
+
+@media only screen and (max-width: 767px) {
+  .textblock {
+    margin: 0px;
+    padding: 20px;
+  }
+  .graphicblock {
+    border-left: 0px;
+    border-bottom: 2px solid #777;
+    padding: 20px;
+  }
+  .topsection {
+    padding: 20px;
+  }
+  .topsection h1 {
+    font-size: 3.8rem;
+  }
+}
