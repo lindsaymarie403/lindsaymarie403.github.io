@@ -187,6 +187,7 @@ a:hover .icon {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   color: #5b5b5b;
+  line-height: 1.4em;
 }
 
 .job-company, .job-years-large, .job-years-small, .job-text, .school-degree, .school-text {
