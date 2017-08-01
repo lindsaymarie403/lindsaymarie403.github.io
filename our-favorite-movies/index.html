@@ -112,7 +112,7 @@
       <div class="row graphic-element" id="five">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-number">5</div>
-          <div class="graphic-title">Just Star Wars</div>
+          <div class="graphic-title">Wow, A New Hope Made a Ton of Money</div>
           <div class="graphic-description">Description</div>
           <div class="graphic-content">
             <div id="chart-five"></div>
@@ -124,7 +124,7 @@
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-number">6</div>
           <div class="graphic-title">When You're Good, You're Good</div>
-          <div class="graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time.</div>
+          <div class="graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time. Buena Vista's total leads the pack at 35, but almost all of those films were made in the last 25 years. Other studios built their dominance slowly over the last 75.</div>
           <div class="graphic-content">
             <div id="chart-six"></div>
           </div>
@@ -272,7 +272,7 @@
               zoomType: 'xy'
           },
           title: {
-              text: 'Height Versus Weight of 507 Individuals by Gender'
+              text: 'Gross Income Versus IMDb Rating of Star Wars Movies'
           },
           subtitle: {
               text: 'Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a> and <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>'
@@ -298,8 +298,8 @@
               layout: 'vertical',
               align: 'left',
               verticalAlign: 'top',
-              x: 100,
-              y: 70,
+              x: 70,
+              y: 50,
               floating: true,
               backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF',
               borderWidth: 1
@@ -322,25 +322,30 @@
                           }
                       }
                   },
-                  tooltip: {
-                      headerFormat: '<b>{series.name}</b><br>',
-                      pointFormat: '{point.x} cm, {point.y} kg'
-                  }
               }
+          },
+          tooltip: {
+                headerFormat: '<b>Movie Title: </b>{point.key}<br>',
+                pointFormat: '<b>IMDb Ranking: </b>{point.y}<br> <b>Gross Income</b> (2017 dollars): ${point.x}'
           },
           series: [{
               name: 'Original Trilogy',
               color: '#7c7444',
               data: [
-                { x: 1583483200, y: 20, name: 'Star Wars', dataLabels: { enabled: true, format: 'Star Wars'}}]
+                { x: 1583483200, y: 8.6, name: 'A New Hope', dataLabels: { enabled: true, format: 'A New Hope'}},
+                { x: 872825900, y: 8.7, name: 'The Empire Strikes Back', dataLabels: { enabled: true, format: 'The Empire Strikes Back'}},
+                { x: 836188200, y: 8.3, name: 'Return of the Jedi', dataLabels: { enabled: true, format: 'Return of the Jedi'}}]
           }, {
               name: 'Prequels',
               color: '#191c26',
-              data: [[161.2, 51.6], [167.5, 59.0], [159.5, 49.2]]
+              data: [{ x: 802874300, y: 6.5, name: 'The Phantom Menace', dataLabels: { enabled: true, format: 'The Phantom Menace'}},
+              { x: 475334700, y: 6.6, name: 'Attack of the Clones', dataLabels: { enabled: true, format: 'Attack of the Clones'}},
+              { x: 527395500, y: 7.6, name: 'Revenge of the Sith', dataLabels: { enabled: true, format: 'Revenge of the Sith'}}]
           }, {
             name: 'New Generation',
             color: '#7c8ca5',
-            data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7]]
+            data: [{ x: 961143200, y: 8, name: 'The Force Awakens', dataLabels: { enabled: true, format: 'The Force Awakens'}},
+            { x: 537326000, y: 7.9, name: 'Rogue One', dataLabels: { enabled: true, format: 'Rogue One'}}]
           }]
       });
       </script>
