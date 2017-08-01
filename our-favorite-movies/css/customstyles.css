@@ -67,13 +67,65 @@ body {
 
 .graphic-title {
   font-family: 'Bellefair', serif;
-  font-size: 1.4em;
+  font-size: 2em;
   color: #7c7444;
-  margin-bottom: 10px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .graphic-description {
   font-family: 'Montserrat', sans-serif;
-  font-size: .9em;
-  margin-bottom: 20px;
+  line-height: 1.6em;
+  margin-bottom: 25px;
+}
+
+/*elimination map*/
+.legend {
+  width: 200px;
+  height: 190px;
+  border: 1px solid #aaa;
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  left: 20px;
+  background-color: #eee;
+}
+
+.legend h4 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  padding-left: 10px;
+}
+
+.legend-name {
+  padding-left: 10px;
+  font-size: 12px;
+  border: 1px solid #ccc;
+  margin: 0px 10px 2px 10px;
+}
+
+.bucket-1 {
+  background-color: #073763;
+  color: #eee;
+}
+
+.bucket-2 {
+  background-color: #0b5394;
+  color: #eee;
+}
+
+.bucket-3 {
+  background-color: #3d85c6;
+}
+
+.bucket-4 {
+  background-color: #6fa8dc;
+}
+
+.bucket-5 {
+  background-color: #9fc5e8;
+}
+
+.bucket-6 {
+  background-color: #f3f3f3;
 }
