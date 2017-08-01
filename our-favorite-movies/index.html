@@ -122,9 +122,9 @@
 
       <div class="row graphic-element" id="six">
         <div class="col-sm-10 col-sm-offset-1">
-          <div class="graphic-number">5</div>
-          <div class="graphic-title">Studios with Blockbuster Hits</div>
-          <div class="graphic-description">Description</div>
+          <div class="graphic-number">6</div>
+          <div class="graphic-title">When You're Good, You're Good</div>
+          <div class="graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time.</div>
           <div class="graphic-content">
             <div id="chart-six"></div>
           </div>
@@ -341,6 +341,79 @@
             name: 'New Generation',
             color: '#7c8ca5',
             data: [[174.0, 65.6], [175.3, 71.8], [193.5, 80.7]]
+          }]
+      });
+      </script>
+
+      <script>
+      Highcharts.chart('chart-six', {
+          chart: {
+              type: 'column'
+          },
+          title: {
+              text: 'Movies Studios with More than 20 Films in Box Office Mojo Top 200 Adjusted Gross of All Time'
+          },
+          subtitle: {
+              text: 'Source: <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>'
+          },
+          credits: {
+              enabled: false
+          },
+          xAxis: {
+            title: {
+                text: 'Movie Studios'
+            },
+              categories: ['Universal Studios', '20th Century Fox', 'Paramount Pictures', 'Warner Bros.', 'Buena Vista']
+          },
+          yAxis: {
+              min: 0,
+              title: {
+                  text: 'Number of Films on Highest-Grossing List'
+              },
+              stackLabels: {
+                  enabled: true,
+                  style: {
+                      fontWeight: 'bold',
+                      color: (Highcharts.theme && Highcharts.theme.textColor) || 'gray'
+                  }
+              }
+          },
+          legend: {
+              align: 'right',
+              x: -30,
+              verticalAlign: 'top',
+              y: 25,
+              floating: true,
+              backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
+              borderColor: '#CCC',
+              borderWidth: 1,
+              shadow: false
+          },
+          tooltip: {
+              headerFormat: '<b>Movies from {point.x}</b><br/>',
+              pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+          },
+          plotOptions: {
+              column: {
+                  stacking: 'normal',
+                  dataLabels: {
+                      enabled: true,
+                      color: (Highcharts.theme && Highcharts.theme.dataLabelsColor) || 'white'
+                  }
+              }
+          },
+          series: [{
+              name: '1992-2017',
+              color: '#7c7444',
+              data: [12, 9, 8, 18, 31]
+          }, {
+              name: '1967-1991',
+              color: '#191c26',
+              data: [10, 12, 14, 8, 4]
+          }, {
+              name: '1941-1966',
+              color: '#7c8ca5',
+              data: [1, 3, 3, 3, 0]
           }]
       });
       </script>
