@@ -56,21 +56,21 @@
       </div>
     </nav><!--end of navbar-->
 
-    <div class="container"> <!--beginning of main body section of document -->
-      <!--page top-->
-      <div class="row">
-        <div class="col-sm-8 col-sm-offset-2" id="page-top">
-          <div id="page-title">A Visual Look at Our Favorite Movies</div>
-          <div id="page-byline">By Lindsay Huth</div>
-          <div id="page-description">There are movies we think are good and movies we all pay to go see. These movies are not always the same. This is a visual look at our favorite movies, using IMDb ratings and data of box office ticket sales (adjusted for inflation) from Box Office Mojo.</div>
-        </div>
+    <!--page top-->
+    <div class="row" id="page-top">
+      <div class="col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+        <div id="page-title">A Visual Look at Our Favorite Movies</div>
+        <div id="page-byline">By Lindsay Huth</div>
+        <div id="page-description">There are movies we think are good and movies we all pay to go see. These movies are not always the same. This is a visual look at our favorite movies, using IMDb ratings and data of box office ticket sales (adjusted for inflation) from Box Office Mojo.</div>
       </div>
+    </div>
 
+    <div class="container"> <!--beginning of main body section of document -->
       <!--chart block one-->
       <div class="row graphic-element" id="one">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">Blockbusters Across the Decades</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">Each decade brought us great films that we paid big bucks to see. From "The Four Horsemen of the Apocalypse" in 1921 to "Star Wars: The Force Awakens" in 2016, here are the highest grossing movies for each decade.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Each decade brought us great films that we paid big bucks to see. From "The Four Horsemen of the Apocalypse" in 1921 to "Star Wars: The Force Awakens" in 2016, here are the highest grossing movies for each decade.</div>
           <div class="graphic-content">
             <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=16GeKvP_O6hhSKznTJNQK_f7JgA_CiJe5JJeCvYPorkE&font=Default&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
           </div>
@@ -81,17 +81,20 @@
       <div class="row graphic-element" id="two">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">Where Film Buffs Reside</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">It's not just Americans who love their movies. Out of all foreign countries, Australia paid the most per 1,000 people &mdash; $37.30 &mdash; to see movies in 2016, followed by South Korea and the United Kingdom.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">It's not just Americans who love their movies. Here are the top 20 foreign countries for box office spending in 2016. Australia paid the most per 1,000 people &mdash; $37,297.97 &mdash; to see movies last year, followed by South Korea and the United Kingdom.</div>
           <div class="graphic-content">
-            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1gmgYjhIStcZ0Mg6UFC3EfgAU0UShQhPgeyhD4qlL&amp;viz=MAP&amp;h=false&amp;lat=37.075721870981376&amp;lng=34.1015625&amp;t=1&amp;z=2&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
+            <iframe width="100%" height="500" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1kk35vzNHAAbhP77LWUXzUfOQLy8zogmjZCljbEwn&amp;viz=MAP&amp;h=false&amp;lat=38.46514705238976&amp;lng=22.5&amp;t=1&amp;z=2&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML"></iframe>
             <div class="legend">
               <h4>2016 Ticket Sales per 1,000 People</h4>
-              <div class="legend-name bucket-1">$32.01 - $44</div>
-              <div class="legend-name bucket-2">$24.01 - $32</div>
-              <div class="legend-name bucket-3">$16.01 - $24</div>
-              <div class="legend-name bucket-4">$8.01 - $16</div>
-              <div class="legend-name bucket-5">$0.01 - $8</div>
+              <div class="legend-name bucket-1">$32,001 - $44,000</div>
+              <div class="legend-name bucket-2">$24,001 - $32,000</div>
+              <div class="legend-name bucket-3">$16,001 - $24,000</div>
+              <div class="legend-name bucket-4">$8,001 - $16,000</div>
+              <div class="legend-name bucket-5">$0.01 - $8,000</div>
               <div class="legend-name bucket-6">Not a Top Movie Market</div>
+            </div>
+            <div id="source">
+              Source: <a href="https://www.imdb.com/chart/top">IMDB Top 250 Movies</a> and <a href="http://www.boxofficemojo.com/alltime/adjusted.htm">Box Office Mojo Top Adjusted Gross Income Films</a>
             </div>
           </div>
         </div>
@@ -101,7 +104,7 @@
       <div class="row graphic-element" id="three">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">Are Movies Getting Better?</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">Generally speaking, the more recent the decade, the more movies it has represented in the IMDb top 250. The 2000s claim the crown for now, but the 2010s aren't over yet. Movies could be getting better &mdash; or maybe we're just not as hard on them as we used to be.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Generally speaking, the more recent the decade, the more movies it has represented in the IMDb top 250. The 2000s claim the crown for now, but the 2010s aren't over yet. Movies could be getting better &mdash; or maybe we're just not as hard on them as we used to be.</div>
           <div class="graphic-content">
             <div id="chart-three"></div>
           </div>
@@ -112,7 +115,7 @@
       <div class="row graphic-element" id="four">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">The Directors We Love</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">21 directors are responsible for the 40 movies that are both in the IMDb Top 250 and the Box Office Mojo Top 200 Adjusted Gross Income Films. Of those directors, eight have more than one on the list. Disney/Pixar (whose movies are grouped together) tops the charts, followed by Steven Spielberg.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">21 directors are responsible for the 40 movies that are both in the IMDb Top 250 and the Box Office Mojo Top 200 Adjusted Gross Income Films. Of those directors, eight have more than one on the list. Disney/Pixar (whose movies are grouped together) tops the charts, followed by Steven Spielberg.</div>
           <div class="graphic-content">
             <div id="chart-four"></div>
           </div>
@@ -123,7 +126,7 @@
       <div class="row graphic-element" id="five">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">The Original "Star Wars" Are Out of This World</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">All eight "Star Wars" films made the Box Office Mojo Top 200 Adjusted Gross Income Films list &mdash; but that doesn't mean we loved them all. The prequels had some of the lowest ticket sales and ratings, while the new generation looks promising. But the original trilogy ranks highest on both measures &mdash; and "A New Hope" is in its own galaxy.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">All eight "Star Wars" films made the Box Office Mojo Top 200 Adjusted Gross Income Films list &mdash; but that doesn't mean we loved them all. The prequels had some of the lowest ticket sales and ratings, while the new generation looks promising. But the original trilogy ranks highest on both measures &mdash; and "A New Hope" is in its own galaxy.</div>
           <div class="graphic-content">
             <div id="chart-five"></div>
           </div>
@@ -134,7 +137,7 @@
       <div class="row graphic-element" id="six">
         <div class="col-sm-10 col-sm-offset-1">
           <div class="graphic-title">The Superpower Studios</div>
-          <div class="col-sm-10 col-sm-offset-1 graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time. Buena Vista's total leads the pack at 35, but almost all of its films were made in the last 25 years. The other studios, by contrast, spread their blockbusters out over the last 75 years.</div>
+          <div class="col-md-10 col-md-offset-1 graphic-description">Just five studios are responsible for 136 of the top 200 highest grossing films of all time. Buena Vista's total leads the pack at 35, but almost all of its films were made in the last 25 years. The other studios, by contrast, spread their blockbusters out over the last 75 years.</div>
           <div class="graphic-content">
             <div id="chart-six"></div>
           </div>
@@ -204,7 +207,7 @@
           },
           series: [{
               name: 'Number of IMDb Top 250 Movies',
-              color: '#7c7444',
+              color: '#917e51',
               dataLabels: {enabled: true},
               data: [
                 { y: 6, name: '6'},
@@ -273,7 +276,7 @@
         },
         series: [{
             showInLegend: false,
-            color: '#7c7444',
+            color: '#917e51',
             data: [
             ['Disney/Pixar', 8],
             ['Steven Spielberg', 5],
@@ -362,11 +365,11 @@
       },
       tooltip: {
             headerFormat: '<b>Movie Title: </b>{point.key}<br>',
-            pointFormat: '<b>IMDb Ranking: </b>{point.y}<br> <b>Gross Income</b> (2017 dollars): ${point.x}'
+            pointFormat: '<b>IMDb Rating: </b>{point.y}<br> <b>Gross Income</b> (2017 dollars): ${point.x}'
       },
       series: [{
           name: 'Original Trilogy',
-          color: '#7c7444',
+          color: '#917e51',
           data: [
             { x: 1583483200, y: 8.6, name: 'A New Hope', dataLabels: { enabled: true, format: 'A New Hope'}},
             { x: 872825900, y: 8.7, name: 'The Empire Strikes Back', dataLabels: { enabled: true, format: 'The Empire Strikes Back'}},
@@ -451,7 +454,7 @@
       },
       series: [{
           name: '1992-2017',
-          color: '#7c7444',
+          color: '#917e51',
           data: [12, 9, 8, 18, 31]
       }, {
           name: '1967-1991',

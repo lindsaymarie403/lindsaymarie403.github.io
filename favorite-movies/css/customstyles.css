@@ -34,21 +34,20 @@ body {
 
 /*container and text for page top*/
 #page-top {
-  border-bottom: 1px solid #7c7444;
-  border-top: 1px solid #7c7444;
-  padding-bottom: 50px;
-  margin-top: 55px;
-  background-color: white;
+  border-bottom: 1px solid #917e51;
+  border-top: 1px solid #917e51;
+  margin-top: -50px;
+  padding: 80px 15px 80px 15px;
+  background-color: #efeee6;
 }
 
 #page-title {
   font-family: 'Bellefair', serif;
-  font-size: 3em;
+  font-size: 3.8em;
   text-align: center;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   line-height: 1.2em;
-  color: #7c7444;
+  color: #917e51;
 }
 
 #page-byline {
@@ -56,13 +55,15 @@ body {
   text-align: center;
   font-size: .9em;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
+  color: #191c26;
 }
 
 #page-description {
   font-family: 'Montserrat', sans-serif;
   line-height: 1.6em;
   text-align: center;
+  color: #191c26;
 }
 
 /*container and text for each chart*/
@@ -73,7 +74,7 @@ body {
 .graphic-title {
   font-family: 'Bellefair', serif;
   font-size: 2.2em;
-  color: #7c7444;
+  color: #917e51;
   margin-bottom: 20px;
   margin-top: 30px;
   text-align: center;
@@ -93,13 +94,13 @@ body {
   border: 1px solid #aaa;
   position: absolute;
   z-index: 1;
-  bottom: 10px;
+  bottom: 35px;
   left: 20px;
-  background-color: #eee;
+  background-color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .legend h4 {
-  font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   padding-left: 10px;
 }
@@ -113,29 +114,35 @@ body {
 
 /*colors for each category on map*/
 .bucket-1 {
-  background-color: #073763;
+  background-color: #605434;
   color: #eee;
 }
 
 .bucket-2 {
-  background-color: #0b5394;
+  background-color: #8e7b4e;
   color: #eee;
 }
 
 .bucket-3 {
-  background-color: #3d85c6;
+  background-color: #ad9a70;
 }
 
 .bucket-4 {
-  background-color: #6fa8dc;
+  background-color: #d8c9a6;
 }
 
 .bucket-5 {
-  background-color: #9fc5e8;
+  background-color: #f7ecd4;
 }
 
 .bucket-6 {
-  background-color: #f3f3f3;
+  background-color: #fcfcfc;
+}
+
+/*map data source*/
+#source {
+  font-family: 'Montserrat', sans-serif;
+  font-size: .8em;
 }
 
 /*footer styles*/
@@ -157,8 +164,56 @@ body {
 }
 
 /*media queries*/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
   #page-top {
-    margin-top: 0px;
+    padding: 60px 15px 60px 15px;
+  }
+  #page-title {
+    font-size: 2.6em;
+  }
+  #page-description, #page-byline, .graphic-description {
+    font-size: .9em;
+  }
+  .graphic-element {
+    margin: 30px 0px 30px 0px;
+  }
+  .graphic-element .col-sm-10 {
+    padding: 5px;
+  }
+  .graphic-title {
+    font-size: 1.8em;
+  }
+  .legend {
+    bottom: 70px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #page-top {
+    padding: 70px 15px 70px 15px;
+  }
+  #page-title {
+    font-size: 3em;
+  }
+  #page-description, #page-byline, .graphic-description {
+    font-size: .9em;
+  }
+  .graphic-element {
+    margin: 40px 0px 40px 0px;
+  }
+  .graphic-title {
+    font-size: 1.8em;
+  }
+  .container {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  #page-title {
+    font-size: 3.2em;
+  }
+  .graphic-title {
+    font-size: 2em;
   }
 }
