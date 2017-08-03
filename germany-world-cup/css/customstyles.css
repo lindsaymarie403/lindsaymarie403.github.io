@@ -130,6 +130,10 @@ div {
   background-color: #ffffff;
 }
 
+#show {
+  display: none;
+}
+
 #winlosschart {
   width: 600px;
   height: 800px;
