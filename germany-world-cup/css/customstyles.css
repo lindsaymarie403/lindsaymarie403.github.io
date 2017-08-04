@@ -134,6 +134,10 @@ div {
   display: none;
 }
 
+#showteams {
+  display: none;
+}
+
 #winlosschart {
   width: 600px;
   height: 800px;
