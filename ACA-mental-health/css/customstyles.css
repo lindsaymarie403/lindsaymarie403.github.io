@@ -7,10 +7,5 @@ body {
 }
 
 .navbar {
-  background-color: #BADA55;
-}
-
-.experience, .education {
-  height: 200px;
-  border: 1px solid #ccc;
+  background-color: #191c26;
 }
