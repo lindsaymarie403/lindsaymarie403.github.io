@@ -37,7 +37,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">My Name</a>
+          <a class="navbar-brand" href="#">Title</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
@@ -54,6 +54,13 @@
       <div class="row">
         <div class="col-sm-10 col-sm-offset-1">
           <div id="chart-one"></div>
+        </div>
+      </div>
+
+      <!--chart two-->
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <div id="chart-two"></div>
         </div>
       </div>
 
@@ -80,10 +87,13 @@
             type: 'line'
         },
         title: {
-            text: 'Low-income people got insurance under the ACA'
+            text: 'Percent of Population with Health Insurance'
         },
         subtitle: {
-            text: 'Source: WorldClimate.com'
+            text: 'Source: U.S. Census Bureau'
+        },
+        credits: {
+            enabled: false,
         },
         xAxis: {
             categories: ['2013', '2015']
@@ -108,6 +118,69 @@
             name: 'Adults at or below 400% of the poverty threshold',
             data: [82.0, 88.2]
         }]
+    });
+  </script>
+
+  <!--chart two-->
+  <script>
+  Highcharts.chart('chart-two', {
+      chart: {
+          type: 'line'
+      },
+      title: {
+          text: 'Percent of Physicians Accepting Insurance'
+      },
+      subtitle: {
+          text: 'Source: JAMA Psychiatry</a>'
+      },
+      xAxis: {
+          categories: ['2005-6', '2009-10'],
+          title: {
+              text: null
+          }
+      },
+      yAxis: {
+          min: 0,
+          title: {
+              text: 'Percent',
+              align: 'high'
+          },
+          labels: {
+              overflow: 'justify'
+          }
+      },
+      tooltip: {
+          valueSuffix: ' percent'
+      },
+      plotOptions: {
+          bar: {
+              dataLabels: {
+                  enabled: true
+              }
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'top',
+          x: 0,
+          y: 80,
+          floating: true,
+          borderWidth: 1,
+          backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+          shadow: true
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+          color: '#917e51',
+          name: 'Psychiatrists',
+          data: [72.3, 55.3]
+      }, {
+          name: 'Other Physicians',
+          data: [93.1, 88.7]
+      }]
     });
   </script>
 
