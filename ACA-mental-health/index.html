@@ -65,6 +65,7 @@
           <p>The ACA’s mandated mental health coverage built on the 2008 Mental Health Parity and Addiction Equity Act, which required plans that cover mental health services do so to the same degree as other medical services.</p>
         </div>
       </div>
+      <div id="chart-ne"></div>
 
       <!--chart one-->
       <div class="row chart-container">
@@ -214,6 +215,11 @@
     <!--chart.js link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" />
 
+    <!--this is a fake chart to make everything behave-->
+    <script>
+    Highcharts.chart('chart-ne', {});
+    </script>
+
     <!--chart one-->
     <script>
     Highcharts.chart('chart-one', {
@@ -272,7 +278,7 @@
           text: 'Percent of Physicians Accepting Insurance'
       },
       subtitle: {
-          text: 'Source: JAMA Psychiatry</a>'
+          text: 'Source: JAMA Psychiatry'
       },
       xAxis: {
           categories: ['2005-6', '2009-10'],
@@ -385,6 +391,7 @@
         text: 'Prevalence of Mental Illness by Income Level',
         fontFamily: "'PT Sans', sans-serif",
         fontSize: 18,
+        fontStyle: 'normal'
       },
       scales: {
         xAxes: [{
