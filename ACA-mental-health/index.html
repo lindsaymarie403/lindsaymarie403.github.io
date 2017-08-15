@@ -129,7 +129,6 @@
             <p>Insurance companies don't update their network listings, meaning many psychiatrists listed are unreachable or not even psychiatrists. Others are not accepting the insurance listed or not taking new patients, making the task of makting a psychiatric appointment onerous.</p>
           </div>
           <div id="chart-three"></div>
-          <svg width="960" height="500"></svg>
         </div>
       </div>
 
@@ -179,12 +178,12 @@
           <div class="chart-description">
             <p>The prevalence of major mental disorders increases as income level decrease, meaning poorer people are more likely to suffer from these issues. But poorer people are also less likely to be able to pay for psychiatric care out of pocket, should they not find a doctor on their insurance plan.</p>
           </div>
-          <select>
-            <option value="volvo">Depression</option>
-            <option value="saab">Generalized Anxiety Disorder</option>
-            <option value="mercedes">Bipolar Disorder</option>
+          <select class="disorder">
+            <option value="depression">Depression</option>
+            <option value="anxiety">Generalized Anxiety Disorder</option>
+            <option value="bipolar">Bipolar Disorder</option>
           </select>
-          <div id="chart-five"></div>
+          <div><canvas id="chartfive"></canvas></div>
         </div>
       </div>
 
@@ -212,10 +211,8 @@
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
     <!--highcharts js link-->
     <script src="chart/Highcharts-5.0.13/code/highcharts.js"></script>
-    <!--plot.ly link-->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <!--d3 link-->
-    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <!--chart.js link-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" />
 
     <!--chart one-->
     <script>
@@ -365,66 +362,77 @@
 
   <!--chart five-->
   <script>
-  var data = [
-      {
-        x: ['Less than $20,000', '$20,000 - 39,999', '$40,000 - 69,999', 'Over $70,000'],
-        y: [27.1, 21.9, 21.1, 19.4],
-        type: 'bar'
-      }
-    ];
-    var layout = {
-    title: 'Rates of Mental Illness by Income Level',
-    xaxis: {
-      title: 'Income Level',
-      titlefont: {
-        family: 'Courier New, monospace',
-        size: 18,
-        color: '#7f7f7f'
-      }
+  Chart.defaults.global.legend.display = false;
+  var ctx = document.getElementById('chartfive').getContext('2d');
+  var chart = new Chart(ctx, {
+    // The type of chart we want to create
+    type: 'bar',
+
+    // The data for our dataset
+    data: {
+        labels: ['Less than $20,000', '$20,000 - 39,999', '$40,000 - 69,999', 'Over $70,000'],
+        datasets: [{
+            backgroundColor: 'rgb(255, 99, 132)',
+            borderColor: 'rgb(255, 99, 132)',
+            data: [27.1, 21.9, 21.1, 19.4],
+        }]
     },
-    yaxis: {
-      title: 'Prevalence of Mental Illness',
-      titlefont: {
-        family: 'Courier New, monospace',
-        size: 18,
-        color: '#7f7f7f'
+
+    // Configuration options go here
+    options: {
+      title: {
+        display: true,
+        text: 'Prevalence of Mental Illness by Income Level',
+        fontFamily: "'PT Sans', sans-serif",
+        fontSize: 18,
+      },
+      scales: {
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Income Level',
+            fontFamily: "'PT Sans', sans-serif",
+            fontSize: 14,
+          }
+        }],
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: 'Percent Diagnosed with Disorder',
+            fontFamily: "'PT Sans', sans-serif",
+            fontSize: 14,
+          }
+        }],
       }
     }
-  };
+  });
 
-Plotly.newPlot('chart-five', data, layout);
-
-  /**function makeTrace(i) {
-    return {
-        y: Array.apply(null, Array(10)).map(() => Math.random()),
-        bar: {
-            color: 'red'
-        },
-        visible: i === 0,
-        name: 'Data set ' + i,
-        type: bar
-    };
-}
-
-    Plotly.plot('chart-five', [0, 1, 2, 3].map(makeTrace), {
-        updatemenus: [{
-            y: 1,
-            yanchor: 'top',
-            buttons: [{
-                method: 'restyle',
-                args: ['visible', [true, false, false, false]],
-                label: 'Depression'
-            }, {
-                method: 'restyle',
-                args: ['visible', [false, true, false, false]],
-                label: 'Anxiety'
-            }, {
-                method: 'restyle',
-                args: ['visible', [false, false, true, false]],
-                label: 'Bipolar Disorder'
-            }]
-        }],
-    });**/
+  // thanks to stackoverflow user rhill for this solution
+  $('.disorder').change(function () {
+          var sel = $(this).val();
+          var newData = [];
+          switch(sel) {
+            case 'anxiety':
+              newData = [10.3, 7.9, 7.3, 6.2];
+              chart.data.datasets[0].data.length = 0;
+              chart.data.datasets[0].data.push.apply(
+              chart.data.datasets[0].data, newData);
+              break;
+            case 'bipolar':
+              newData = [10.1, 8.3, 6, 4.7];
+              chart.data.datasets[0].data.length = 0;
+              chart.data.datasets[0].data.push.apply(
+              chart.data.datasets[0].data, newData);
+              break;
+            case 'depression':
+              newData = [27.1, 21.9, 21.1, 19.4];
+              chart.data.datasets[0].data.length = 0;
+              chart.data.datasets[0].data.push.apply(
+              chart.data.datasets[0].data, newData);
+              break;
+          }
+          chart.update();
+        });
   </script>
 
   </body>
