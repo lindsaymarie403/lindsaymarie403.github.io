@@ -31,7 +31,20 @@
 
   <body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top"><!--beginning of navbar-->
+    <div id="top-strip">
+      <div id="page-tag"> After Obamacare: Health in Maryland</div>
+    </div>
+
+    <div id="hero-container">
+      <img id="hero" src="IMG_4005_edit.jpg">
+      <div id="hero-title">
+        <div id="headline">Barriers to Care</div>
+        <div id="subhead">More people have mental health coverage, but they still can't see psychiatrists</div>
+      </div>
+      <div id="photo-caption">MedStar Health employs many of Maryland's psychiatrists</div>
+    </div>
+
+    <nav class="navbar"><!--beginning of navbar-->
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -40,18 +53,27 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Title</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Resume</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
+            <li class="active"><a href="#">Top</a></li>
+            <li><a href="#one">More Patients, Fewer Psychiatrists</a></li>
+            <li><a href="#two">Search and Struggle</a></li>
+            <li><a href="#three">'First to Be Shut Out'</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav><!--end of navbar-->
 
+
     <div class="container"> <!--beginning of main body section of document -->
+
+      <!--byline-->
+      <div class="row text-container">
+        <div class="col-sm-8 col-sm-offset-2">
+          <div id="byline">By Lindsay Huth</div>
+        </div>
+      </div>
 
       <!--article section one-->
       <div class="row text-container">
@@ -60,7 +82,9 @@
           <p>Her daughter needed medications to stay stable after release &mdash; but she couldn’t find an outpatient psychiatrist to treat her, Serkin said. The crisis center was the only option.</p>
           <p>“It doesn’t make sense to have a population that has insurance but can’t find care,” said Serkin, executive director of the Montgomery County Federation of Families for Children’s Mental Health.</p>
           <p>Over 200,000 people were added to the health insurance rolls in Maryland between 2013 and 2015, before and after the Affordable Care Act’s insurance exchanges opened, according to U.S. Census Bureau data, and the law mandated that plans on the individual and small group markets cover mental health services.</p>
-          <p>But patients like Serkin’s daughter still have trouble seeing psychiatrists, who, doctors and advocates say, are overbooked, hard to find &mdash; and often not accepting insurance at all</p>
+          <p>But patients like Serkin’s daughter still have trouble seeing psychiatrists, who, doctors and advocates say, are overbooked, hard to find &mdash; and often not accepting insurance at all.</p>
+          <br />
+          <p><span class="section" id="one">More Patients, Fewer Psychiatrists</span></p>
           <p>Serkin’s family bought insurance on the Maryland Health Benefit Exchange, the state’s ACA-mandated insurance marketplace that began enrolling patients in October 2013.</p>
           <p>The ACA’s mandated mental health coverage built on the 2008 Mental Health Parity and Addiction Equity Act, which required plans that cover mental health services do so to the same degree as other medical services.</p>
         </div>
@@ -110,6 +134,8 @@
           <p>For patients with urges to hurt themselves or others, timely and regular care is essential for personal and public safety, Shaya said.</p>
           <p>For others, untreated psychiatric conditions prevent normal engagement in society, he said.</p>
           <p>“Their disease is such that their entire life is destroyed,” Shaya said. “It deals with the most essential part of our being &mdash; our brain, our ability to think, our ability to decide &mdash; and when that’s taken away, people can’t get jobs and end up on the streets.”</p>
+          <br/>
+          <p><span class="section" id="two">Search and Struggle</span></p>
           <p>Many patients like Serkin’s daughter need immediate care when transitioning from psychiatric hospital stays to outpatient services, relying on medication to keep them stable, said Adrienne Ellis, former director of the Maryland Parity Project, which helps people with difficulty accessing mental health providers.</p>
           <p>Ellis said that during her tenure, the Parity Project fielded frequent calls from people on private insurance plans who were told they needed to wait four to six weeks for an appointment &mdash; often unreasonable given urgent mental distress.</p>
           <p>Ellis said many had called 10 to 15 providers, trying to find one who would even accept a new patient on their plan.</p>
@@ -142,6 +168,8 @@
           <p>“Psychiatrists are being driven out of business and no one’s doing anything about it. Patients are not getting care and no one’s doing anything about it,” Jones-Fearing said.</p>
           <p>The state sought to rectify the inadequate networks by enacting a law last year that requires carriers to meet certain standards for the physician directories they provide.</p>
           <p>But Jones-Fearing and Shaya said there’s a shortage of psychiatrists in general, as psychiatry is already one of the lowest-paying medical specialties.</p>
+          <br/>
+          <p><span class="section" id="three">'First to Be Shut Out'</span></p>
           <p>The psychiatrists the state does have are concentrated in Montgomery, Howard and Baltimore Counties and Baltimore City, according to the Maryland Board of Physicians’ roster.</p>
           <p>Those areas are generally more populated, but that leaves people in the counties with the largest percent change in insured populations between 2013 and 2015 &mdash; like Wicomico and Prince George’s Counties &mdash; without care within a manageable distance.</p>
           <p>And Somerset County, which has the highest poverty rate in the state, according to the U.S. Census Bureau, has zero psychiatrists.</p>
@@ -152,13 +180,37 @@
       <div class="row chart-container">
         <div class="col-sm-10 col-sm-offset-1 chart-column">
           <div class="chart-title">
-            Psychiatrists' offices are far from rural and low-income Marylanders
+            Few psychiatrists serve southern Maryland
           </div>
           <div class="chart-description">
             <p>Maryland's 1,271 psychiatrists are concentrated in urban areas, meaning many newly insured people would have to travel far to find a psychiatrist who's accepting their insurance or new patients. And Somerset County, which has the highest poverty rate in the state, has no psychiatrist.</p>
           </div>
+          <div class="chart-header">Number of Insured People per Psychiatrist by County</div>
           <div id="chart-four">
-            <iframe width="100%" height="520" frameborder="0" src="https://lindsaymarie403.carto.com/builder/db08cd77-f9a2-4105-a363-3a5c0b3c2280/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <iframe width="100%" height="520" frameborder="0" src="https://lindsaymarie403.carto.com/builder/6f3c6ff4-2ae2-4e27-990f-b9affafb1c6b/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
+            <div id="legend">
+              <div id="legend-title">Insured People Per Psychiatrist</div>
+              <div class="legend-item">
+                <div class="color-block-one"></div>
+                <div class="color-title">50,000 &mdash; 14,000 people</div>
+              </div>
+              <div class="legend-item">
+                <div class="color-block-two"></div>
+                <div class="color-title">13,999 &mdash; 8,000 people</div>
+              </div>
+              <div class="legend-item">
+                <div class="color-block-three"></div>
+                <div class="color-title">7,999 &mdash; 6,000 people</div>
+              </div>
+              <div class="legend-item">
+                <div class="color-block-four"></div>
+                <div class="color-title">5,999 &mdash; 2,500 people</div>
+              </div>
+              <div class="legend-item">
+                <div class="color-block-five"></div>
+                <div class="color-title">Under 2,499 people</div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -179,14 +231,14 @@
           <div class="chart-description">
             <p>The prevalence of major mental disorders increases as income level decrease, meaning poorer people are more likely to suffer from these issues. But poorer people are also less likely to be able to pay for psychiatric care out of pocket, should they not find a doctor on their insurance plan.</p>
           </div>
-          <div id="chart-five-header">
-            <span class="header-text">Prevalence of</span>
+          <div class="chart-header">
+            Prevalence of
             <select class="disorder">
               <option value="depression">Depression</option>
               <option value="anxiety">Generalized Anxiety</option>
               <option value="bipolar">Bipolar Disorder</option>
             </select>
-            <span class="header-text">by Income Level</span>
+            by Income Level
           </div>
           <div id="chart-five">
             <canvas id="chartfive"></canvas>
@@ -205,6 +257,15 @@
 
     </div><!-- /.container -->
 
+    <!--footer-->
+    <div id="footer">
+
+      <div class="row container">
+        <div class="col-sm-6 col-sm-offset-3" id="copyright">Copyright &copy; 2017 Lindsay Huth</div>
+      </div>
+
+    </div>
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -220,6 +281,18 @@
     <script src="chart/Highcharts-5.0.13/code/highcharts.js"></script>
     <!--chart.js link-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js" />
+
+    <script>
+    $(document).ready(function() {
+      console.log($(window).scrollTop());
+      if($(window).scrollTop() > 550) {
+        $('nav').addClass('second-nav-fixed');
+      }
+      if($(window).scrollTop() < 551) {
+        $('nav').removeClass('second-nav-fixed');
+      }
+    });
+    </script>
 
     <!--this is a fake chart to make everything behave-->
     <script>
@@ -263,10 +336,14 @@
         },
         series: [{
             name: 'All Adults',
-            data: [88.3, 92.6]
+            data: [88.3, 92.6],
+            color: '#859091',
+            lineWidth: 3,
         }, {
             name: 'Adults at or below 400 percent of the poverty threshold',
-            data: [82.0, 88.2]
+            data: [82.0, 88.2],
+            color: '#7cc0c9',
+            lineWidth: 3,
         }]
     });
   </script>
@@ -314,12 +391,15 @@
           enabled: false
       },
       series: [{
-          color: '#917e51',
+          color: '#7cc0c9',
           name: 'Psychiatrists',
-          data: [72.3, 55.3]
+          data: [72.3, 55.3],
+          lineWidth: 3,
       }, {
           name: 'Other Physicians',
-          data: [93.1, 88.7]
+          data: [93.1, 88.7],
+          color: '#859091',
+          lineWidth: 3,
       }]
     });
   </script>
@@ -331,42 +411,52 @@
             type: 'bar'
         },
         title: {
-            text: 'Psychiatrists Listed on Insurance Networks'
+            text: 'Status of Psychiatrists Listed on Insurance Networks'
         },
         credits: {
             enabled: false
         },
         xAxis: {
-            categories: ['Psychiatrists']
+            categories: ['']
         },
         yAxis: {
             min: 0,
             title: {
-                text: 'All Psychiatrists Listed'
+                text: 'Percent of Psychiatrists Listed'
+            },
+            labels: {
+              format: '{value}%',
             }
         },
         legend: {
-            reversed: true
+            reversed: true,
+            itemDistance: 30,
+            itemMarginBottom: 10,
+            itemStyle: {
+              fontSize: '13px',
+              fontWeight: 'normal',
+            }
         },
         plotOptions: {
             series: {
                 stacking: 'percent',
                 dataLabels: {
                     enabled: true,
+                    format: '{y} percent'
                 },
             }
         },
         series: [{
-            name: 'Psychiatrists Accepting Insurance Listed and Scheduling Appointments in Next 45 Days',
-            data: [156],
-            color: '#ff4949'
+            name: 'Psychiatrists Accepting Insurance Listed and Taking Appointments in Next 45 Days',
+            data: [13.5],
+            color: '#7cc0c9'
         }, {
-            name: 'Not Psychiatrists or Not Accepting Insurance or New Patients',
-            data: [341],
-            color: '#c6c6c6'
+            name: 'Not Psychiatrists, Not Accepting Insurance or Not Taking New Patients',
+            data: [29.5],
+            color: '#859091'
         }, {
-            name: 'Not Reachable',
-            data: [657],
+            name: 'Unreachable',
+            data: [56.9],
             color: '#e8e8e8'
         }]
     });
@@ -384,7 +474,7 @@
     data: {
         labels: ['Less than $20,000', '$20,000 - 39,999', '$40,000 - 69,999', 'Over $70,000'],
         datasets: [{
-            backgroundColor: 'rgb(255, 99, 132)',
+            backgroundColor: '#7cc0c9',
             borderColor: 'rgb(255, 99, 132)',
             data: [27.1, 21.9, 21.1, 19.4],
         }]
@@ -402,6 +492,7 @@
           },
           ticks: {
             fontSize: 14,
+            fontFamily: "'PT Sans', sans-serif",
           }
         }],
         yAxes: [{
@@ -413,6 +504,7 @@
           },
           ticks: {
             fontSize: 14,
+            fontFamily: "'PT Sans', sans-serif",
             min: 0,
             max: 30,
             callback: function(label, index, labels) {
