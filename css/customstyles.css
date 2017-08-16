@@ -449,8 +449,13 @@ a:hover .author {
   border-radius: 3px;
 }
 
+.portfolio-item a {
+  text-decoration: none;
+  color: #2d2d2d;
+}
+
 .data-thumbnail {
-  height: 300px;
+  height: 330px;
   overflow: hidden;
 }
 
