@@ -174,17 +174,23 @@
       <div class="row chart-container">
         <div class="col-sm-10 col-sm-offset-1 chart-column">
           <div class="chart-title">
-            Low-income people are most affected by mental illness
+            Low-income people are most likely to suffer from mental illness
           </div>
           <div class="chart-description">
             <p>The prevalence of major mental disorders increases as income level decrease, meaning poorer people are more likely to suffer from these issues. But poorer people are also less likely to be able to pay for psychiatric care out of pocket, should they not find a doctor on their insurance plan.</p>
           </div>
-          <select class="disorder">
-            <option value="depression">Depression</option>
-            <option value="anxiety">Generalized Anxiety Disorder</option>
-            <option value="bipolar">Bipolar Disorder</option>
-          </select>
-          <div><canvas id="chartfive"></canvas></div>
+          <div id="chart-five-header">
+            <span class="header-text">Prevalence of</span>
+            <select class="disorder">
+              <option value="depression">Depression</option>
+              <option value="anxiety">Generalized Anxiety</option>
+              <option value="bipolar">Bipolar Disorder</option>
+            </select>
+            <span class="header-text">by Income Level</span>
+          </div>
+          <div id="chart-five">
+            <canvas id="chartfive"></canvas>
+          </div>
         </div>
       </div>
 
@@ -386,19 +392,15 @@
 
     // Configuration options go here
     options: {
-      title: {
-        display: true,
-        text: 'Prevalence of Mental Illness by Income Level',
-        fontFamily: "'PT Sans', sans-serif",
-        fontSize: 18,
-        fontStyle: 'normal'
-      },
       scales: {
         xAxes: [{
           scaleLabel: {
             display: true,
             labelString: 'Income Level',
             fontFamily: "'PT Sans', sans-serif",
+            fontSize: 16,
+          },
+          ticks: {
             fontSize: 14,
           }
         }],
@@ -407,10 +409,22 @@
             display: true,
             labelString: 'Percent Diagnosed with Disorder',
             fontFamily: "'PT Sans', sans-serif",
+            fontSize: 16,
+          },
+          ticks: {
             fontSize: 14,
+            min: 0,
+            max: 30,
+            callback: function(label, index, labels) {
+              return label+'%';
+            }
           }
         }],
-      }
+      },
+      tooltips: {
+        enabled: true
+      },
+      maintainAspectRatio: false,
     }
   });
 
