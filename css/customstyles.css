@@ -78,16 +78,17 @@ a:hover .icon {
 #hero-name {
   font-family: 'Lato', sans-serif;
   font-weight: 900;
-  font-size: 1.4em;
+  font-size: 1.6em;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #23232d;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
 #hero-title {
   font-family: 'Merriweather', serif;
-  font-size: 2em;
+  font-size: 2.2em;
   color: #FFF;
   margin-bottom: 20px;
 }
@@ -354,6 +355,48 @@ a:hover .author {
 #built {
   text-align: right;
   font-size: .8em;
+}
+
+/**new about page styles**/
+.bio {
+  font-family: 'Merriweather', serif;
+  font-size: 1em;
+  padding: 65px;
+  line-height: 1.8em;
+}
+
+#bio-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  color: #54536d;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#button-section {
+  padding: 0px 50px 35px 65px;
+}
+
+#button {
+  padding: 0px 15px 0px 15px;
+}
+
+#button a {
+  text-decoration: none;
+}
+
+.about-button {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.2em;
+  color: #e9e9e9;
+  background-color: #54536d;
+  border-radius: 3px;
+  border: 1px solid #23232d;
+  height: 45px;
+  padding-top: 5px;
 }
 
 /*media queries*/
