@@ -402,15 +402,20 @@ a:hover .author {
   margin-bottom: 20px;
 }
 
-#button-section {
-  padding: 0px 50px 35px 65px;
+#about-content {
+  background-color: #FFF;
+  position: relative;
+  z-index: 1;
+  margin: 0px auto 0px auto;
+  top: -50px;
+  padding: 10px 15px 0px 15px;
 }
 
-#button {
-  padding: 0px 15px 0px 15px;
+.button {
+  padding: 0px;
 }
 
-#button a {
+.button a {
   text-decoration: none;
 }
 
@@ -420,7 +425,6 @@ a:hover .author {
   font-size: 1.2em;
   color: #e9e9e9;
   background-color: #54536d;
-  border-radius: 3px;
   border: 1px solid #23232d;
   height: 45px;
   padding-top: 5px;
@@ -583,5 +587,7 @@ a:hover .author {
   #education {
     border-bottom: 1px solid #e8e8e8;
   }
-
+  .bio {
+    padding: 35px;
+  }
 }
