@@ -29,7 +29,7 @@
     <![endif]-->
   </head>
 
-  <body>
+  <body data-spy="scroll" data-target=".navbar" data-offset="80">
 
     <div id="top-strip">
       <div id="page-tag"> After Obamacare: Health in Maryland</div>
@@ -41,7 +41,7 @@
         <div id="headline">Barriers to Care</div>
         <div id="subhead">More people have mental health coverage, but they still can't see psychiatrists</div>
       </div>
-      <div id="photo-caption">MedStar Health employs many of Maryland's psychiatrists</div>
+      <div id="photo-caption">MedStar Health employs 58 of Maryland's 1,154 psychiatrists. But finding one who takes your insurance is difficult. (Photo: Lindsay Huth)</div>
     </div>
 
     <nav class="navbar"><!--beginning of navbar-->
@@ -546,6 +546,11 @@
           }
           chart.update();
         });
+  </script>
+
+  <!--scroll spy for nav-->
+  <script>
+    $('body').scrollspy({ target: '.navbar', offset: 80 })
   </script>
 
   </body>
