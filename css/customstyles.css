@@ -542,10 +542,6 @@ a:hover .about-button {
   font-weight: 700;
 }
 
-#last {
-  margin-bottom: 30px;
-}
-
 /*media queries*/
 /*allowing job years to move at 992px*/
 @media only screen and (max-width: 991px) {

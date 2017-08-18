@@ -119,19 +119,34 @@ li a {
 }
 
 /**byline**/
+#story-top {
+  margin-top: 75px;
+  margin-bottom: 25px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e9e9e9;
+}
+
 #byline {
   font-family: 'PT Sans', sans-serif;
   font-weight: 700;
-  margin-top: 75px;
-  margin-bottom: 25px;
   text-transform: uppercase;
+  padding-left: 0px;
 }
 
 #CNS {
   font-family: 'PT Sans', sans-serif;
   font-weight: 400;
-  margin-bottom: 20px;
   text-transform: none;
+}
+
+#share-story {
+  color: red;
+  text-align: right;
+}
+
+.icon {
+  color: #7cc0c9;
+  margin-left: 15px;
 }
 
 /**body text and charts**/
