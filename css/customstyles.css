@@ -562,8 +562,14 @@ a:hover .author {
   #hero-container img {
     display: none;
   }
+  #hero-container-resume {
+    height: 230px;
+  }
   #hero-row {
-    top: 100px;
+    top: 50px;
+  }
+  #hero-row-resume {
+    top: 70px;
   }
   #portrait {
     display: none;
