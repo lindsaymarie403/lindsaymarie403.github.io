@@ -460,6 +460,9 @@ a:hover .about-button {
 
 .portfolio-block {
   padding: 0px 15px 0px 15px;
+}
+
+.portfolio-block .col-sm-6 {
   margin-bottom: 50px;
 }
 
@@ -485,6 +488,9 @@ a:hover .about-button {
 
 .portfolio-description {
   padding: 20px;
+}
+
+.writing {
   margin-bottom: 45px;
 }
 

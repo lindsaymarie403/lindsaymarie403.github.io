@@ -256,6 +256,13 @@ li a {
   background-color: #c0e6ea;
 }
 
+.color-title {
+  font-family: 'PT Sans',sans-serif;
+  font-size: .8em;
+  margin-left: 20px;
+  margin-top: -3px;
+}
+
 /**chart four and five header**/
 .chart-header {
   margin: 0px auto 10px auto;
