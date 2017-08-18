@@ -13,8 +13,8 @@
     <!--meta tags for FB and Twitter sharing-->
     <meta property="og:title" content="Barriers to Care"/>
     <meta property="og:url" content="https://lindsaymarie403.github.io/ACA-mental-health/index.html"/>
-    <meta property="og:description" content="More people have access to mental health coverage, but they still can't see psychiatrists."/>
-    <meta property="og:image" content="http://lindsaymarie403.github.io/ACA-mental-health/IMG_4005_edit.jpg"/>
+    <meta property="og:description" content="More people have access to mental health coverage, but they still can't see psychiatrists." />
+    <meta property="og:image" content="http://lindsaymarie403.github.io/ACA-mental-health/IMG_4005_edit.jpg "/>
 
     <title>Barriers to Care</title>
 
@@ -84,7 +84,7 @@
           By Lindsay Huth<span id="CNS"> for Capital News Service</span>
           </div>
           <div class="col-sm-6" id="share-story">
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//lindsaymarie403.github.io/ACA-mental-health/index.html" target="_blank"><i class="fa fa-envelope fa-lg icon" id="fb"aria-hidden="true"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//lindsaymarie403.github.io/ACA-mental-health/index.html" target="_blank"><i class="fa fa-facebook fa-lg icon" id="fb"aria-hidden="true"></i></a>
               <a href="https://twitter.com/home?status=More%20people%20have%20mental%20health%20coverage,%20but%20they%20cant%20see%20psychiatrists%3A%20https%3A//lindsaymarie403.github.io/ACA-mental-health/index.html" target="_blank"><i class="fa fa-twitter fa-lg icon" id="twitter" aria-hidden="true"></i></a>
           </div>
         </div>
@@ -93,7 +93,7 @@
       <!--article section one-->
       <div class="row text-container">
         <div class="col-sm-8 col-sm-offset-2">
-          <p>Celia Serkin’s daughter had just been released from psychiatric treatment in a hospital when she found herself back in a 24-hour crisis center.</p>
+          <p><span id="dateline">COLLEGE PARK, Md. &mdash; </span>Celia Serkin’s daughter had just been released from psychiatric treatment in a hospital when she found herself back in a 24-hour crisis center.</p>
           <p>Her daughter needed medications to stay stable after release &mdash; but she couldn’t find an outpatient psychiatrist to treat her, Serkin said. The crisis center was the only option.</p>
           <p>“It doesn’t make sense to have a population that has insurance but can’t find care,” said Serkin, executive director of the Montgomery County Federation of Families for Children’s Mental Health.</p>
           <p>Over 200,000 people were added to the health insurance rolls in Maryland between 2013 and 2015, before and after the Affordable Care Act’s insurance exchanges opened, according to U.S. Census Bureau data, and the law mandated that plans on the individual and small group markets cover mental health services.</p>
@@ -201,6 +201,7 @@
             <p>Maryland's 1,271 psychiatrists are concentrated in urban areas, meaning many newly insured people would have to travel far to find a psychiatrist who's accepting their insurance or new patients. And Somerset County, which has the highest poverty rate in the state, has no psychiatrist.</p>
           </div>
           <div class="chart-header">Number of Insured People per Psychiatrist by County</div>
+          <div class="chart-subtitle">Source: Maryland Board of Physicians and U.S. Census Bureau</div>
           <div id="chart-four">
             <iframe width="100%" height="520" frameborder="0" src="https://lindsaymarie403.carto.com/builder/a45d38b2-9961-43eb-a7e2-38f6f8e25629/embed" allowfullscreen webkitallowfullscreen mozallowfullscreen oallowfullscreen msallowfullscreen></iframe>
             <div id="legend">
@@ -255,6 +256,7 @@
             </select>
             by Income Level
           </div>
+          <div class="chart-subtitle">Source: JAMA Psychiatry</div>
           <div id="chart-five">
             <canvas id="chartfive"></canvas>
           </div>
@@ -427,6 +429,9 @@
         },
         title: {
             text: 'Status of Psychiatrists Listed on Insurance Networks'
+        },
+        subtitle: {
+            text: 'Source: Mental Health Association of Maryland'
         },
         credits: {
             enabled: false

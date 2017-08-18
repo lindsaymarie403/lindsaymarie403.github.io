@@ -167,6 +167,14 @@ li a {
   margin: 25px 20px 10px 20px;
 }
 
+.chart-subtitle {
+  font-family: 'PT Sans', sans-serif;
+  font-size: .8em;
+  color: #686868;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
 .chart-description {
   font-family: 'PT Sans', sans-serif;
   margin: 10px 20px 40px 20px;
@@ -248,16 +256,9 @@ li a {
   background-color: #c0e6ea;
 }
 
-.color-title {
-  font-family: 'PT Sans',sans-serif;
-  font-size: .8em;
-  margin-left: 20px;
-  margin-top: -3px;
-}
-
 /**chart four and five header**/
 .chart-header {
-  margin: 0px auto 0px auto;
+  margin: 0px auto 10px auto;
   font-family: 'PT sans', sans-serif;
   font-size: 1.2em;
   text-align: center;
@@ -308,7 +309,7 @@ select option {
   color: #2d2d2d;
 }
 
-
+/**medium screen size**/
 @media only screen and (max-width: 1199px) and (min-width: 992px) {
   #hero-title {
     top: 0px;
@@ -324,6 +325,7 @@ select option {
   }
 }
 
+/**small screen size**/
 @media only screen and (max-width: 991px) and (min-width: 768px) {
   #hero-title {
     margin-left: 10%;
@@ -340,6 +342,7 @@ select option {
   }
 }
 
+/**xs screen size**/
 @media only screen and (max-width: 767px) {
   .navbar-brand {
     font-size: .7em;
