@@ -408,7 +408,7 @@ a:hover .author {
   z-index: 1;
   margin: 0px auto 0px auto;
   top: -50px;
-  padding: 10px 15px 0px 15px;
+  padding: 0px 15px 0px 15px;
 }
 
 .button {
@@ -430,6 +430,10 @@ a:hover .author {
   padding-top: 5px;
 }
 
+a:hover .about-button {
+  background-color: #4b4a63;
+}
+
 /**new resume styles**/
 #resume-name {
   font-family: 'Merriweather', serif;
@@ -444,9 +448,19 @@ a:hover .author {
 }
 
 /**new portfolio styles**/
+#cat-tag {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.1em;
+  text-align: center;
+  color: #54536d;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 30px 0px 30px 0px;
+}
+
 .portfolio-block {
-  padding: 15px;
-  margin-top: 20px;
+  padding: 0px 15px 0px 15px;
+  margin-bottom: 50px;
 }
 
 .portfolio-item {
@@ -471,6 +485,7 @@ a:hover .author {
 
 .portfolio-description {
   padding: 20px;
+  margin-bottom: 45px;
 }
 
 .portfolio-date {
@@ -506,20 +521,29 @@ a:hover .author {
 }
 
 .portfolio-lede {
-  font-family: 'Lato', sans-serif;
-  font-size: .9em;
+  font-family: 'Merriweather', serif;
+  font-size: .85em;
   color: #5b5b5b;
-  line-height: 1.4em;
+  line-height: 1.5em;
 }
 
 .portfolio-explanation {
-  font-family: 'Merriweather', sans-serif;
-  font-size: .85em;
-  padding: 10px 0px 20px 0px;
+  font-family: 'Lato', sans-serif;
+  font-size: .95em;
+  padding: 10px 0px 25px 0px;
   margin-top: 15px;
   color: #5b5b5b;
   line-height: 1.5em;
   border-bottom: 2px solid #e9e9e9;
+}
+
+.my-take {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+#last {
+  margin-bottom: 30px;
 }
 
 /*media queries*/
