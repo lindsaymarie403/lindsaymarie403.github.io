@@ -183,7 +183,8 @@ a:hover .icon {
 /*job styles*/
 .job {
   /*border-bottom: 1px solid #d6d6d6;*/
-  margin-bottom: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .job-title {
