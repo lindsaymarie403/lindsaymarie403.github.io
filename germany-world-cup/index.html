@@ -12,7 +12,8 @@
 
     <title>Germany's World Cup Run</title>
 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <!--Google fonts here-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:700|Vollkorn:400,400i" rel="stylesheet">
 
     <!-- Bootstrap core CSS, which has been minified for faster load.  You can USE the styles in this stylesheet, but NEVER EDIT THIS FILE-->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -39,11 +40,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Germany World Cup 2014</a>
+          <a class="navbar-brand" href="#">The 2014 World Cup</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Top</a></li>
+            <li class="active"><a href="#">TOP</a></li>
             <li><a href="#one">1</a></li>
             <li><a href="#two">2</a></li>
             <li><a href="#three">3</a></li>
@@ -56,16 +57,22 @@
     </nav><!--end of navbar-->
 
     <div class="row topsection">
-      <div class="col-sm-6 col-sm-offset-3 topbox">
+      <img src="Germany_lifts_the_2014_FIFA_World_Cup.jpg" id="hero">
+      <div class="col-sm-6 col-sm-offset-3">
         <h1>Germany's Run to World Cup Victory</h1>
-        <div class="byline"><span class="lowercase">by</span> Lindsay Huth</div>
-        <p class="lead">The German men's national soccer team did not lose a single game on the road to winning the 2014 World Cup, their fourth title. This story &mdash; told through graphics &mdash; documents their path to victory.</p>
+        <div class="byline">by Lindsay Huth</div>
+      </div>
+    </div>
+
+    <div class="row intro">
+      <div class="col-sm-8 col-sm-offset-2">
+        <p class="lead">The German men's national soccer team didn't lose a single game on the road to winning the 2014 World Cup, their fourth title. This story &mdash; told through graphics &mdash; documents their path to victory.</p>
       </div>
     </div>
 
     <div class="row graphiccontainer" id="one">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-md-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>Germany Got Better as Tournament Progressed</h2>
         </div>
@@ -75,7 +82,7 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
           <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1Ou94QnoAnXPWn4ZkT4X8B2uEj3APcl83Uz3-wFmZnoA&font=OpenSans-GentiumBook&lang=en&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
         </div>
@@ -85,7 +92,7 @@
 
     <div class="row graphiccontainer" id="two">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>Stadiums Hosting Wins</h2>
         </div>
@@ -95,7 +102,7 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
           <iframe src="https://www.google.com/maps/d/embed?mid=1Q-DtdOu6iqPJ-WJzGgxqiSqXYSM" id="stadium-map" width="640" height="480"></iframe>
         </div>
@@ -106,7 +113,7 @@
 
     <div class="row graphiccontainer" id="three">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>Team Faced Tough Global Foes</h2>
         </div>
@@ -121,7 +128,7 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
           <iframe width="100%" height="600" scrolling="no" frameborder="no" src="https://fusiontables.google.com/embedviz?q=select+col4%3E%3E1+from+1rQS3QRgJq3wMhlmSISNjqX7y1RvCw3SnVxzv84vn&amp;viz=MAP&amp;h=false&amp;lat=19.376901323790506&amp;lng=-22.67578125&amp;t=1&amp;z=2&amp;l=col4%3E%3E1&amp;y=2&amp;tmplt=2&amp;hml=KML" id="world-map"></iframe>
           <div class="legend">
@@ -142,7 +149,7 @@
 
     <div class="row graphiccontainer" id="four">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>How Germany Won</h2>
         </div>
@@ -151,14 +158,16 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
-          <p>Germany dominated the scoreboard during the World Cup. Its 2.57 goals scored per game was the highest average of any team.</p>
-          <p>Germany also led the field in the percent of attempted passes that were successful. The team completed 81.77 percent of its passes.</p>
-          <p>While Germany ranked near the middle -- 13 out of 32 teams -- for shots per game, its strength came from the precision of those shots. 72.45% of its shots were on target, higher than for any other team.</p>
-          <p>Germany didn't just eke out wins; it dominated its games. On average, it scored 2 more goals than it allowed during each game, a greater margin than any other team's.</p>
-          <p>But during the games, Germany's players shared the ball more than other teams. The team made the most passes per game -- roughly 726.</p>
-          <p>Despite its dominant performance, Germany's defensive performance was largely in line with other teams. Germany's players completed 85% of their clearances and made 3.43 saves per game -- both roughly average among the other World Cup contenders.</p>
+          <ul id="facts">
+            <li>Germany dominated the scoreboard during the World Cup. Its 2.57 goals scored per game was the highest average of any team.</li>
+            <li>Germany also led the field in the percent of attempted passes that were successful. The team completed 81.77 percent of its passes.</li>
+            <li>While Germany ranked near the middle -- 13 out of 32 teams -- for shots per game, its strength came from the precision of those shots. 72.45 percent of its shots were on target, higher than for any other team.</li>
+            <li>Germany didn't just eke out wins; it dominated its games. On average, it scored 2 more goals than it allowed during each game, a greater margin than any other team's.</li>
+            <li>But during the games, Germany's players shared the ball more than other teams. The team made the most passes per game -- roughly 726.</li>
+            <li>Despite its dominant performance, Germany's defensive performance was largely in line with other teams. Germany's players completed 85% of their clearances and made 3.43 saves per game -- both roughly average among the other World Cup contenders.</li>
+          </ul>
         </div>
       </div>
 
@@ -166,7 +175,7 @@
 
     <div class="row graphiccontainer" id="five">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>A Passing Machine</h2>
         </div>
@@ -175,7 +184,7 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
           <div id="passeschart"></div>
         </div>
@@ -185,11 +194,11 @@
 
     <div class="row graphiccontainer" id="six">
 
-      <div class="col-sm-3 col-sm-offset-1 textblock">
+      <div class="col-md-4 col-sm-offset-1 textblock">
         <div class="col-sm-12 graphictitle">
           <h2>Impressive on Offense, Stingy on Defense</h2>
         </div>
-        <div class="col-sm-12 graphictext">
+        <div class="col-md-12 graphictext">
           <p>It may seem obvious, but one reason Germany won the World Cup is that it scored more goals per game, on average, than any other team in the tournament, while letting in fewer goals per game on average than all but one team, Costa Rica.</p>
           <p>Teams on the right side of this graphic scored more goals per game on average than teams on the left.  Teams on the top of the graphic let in more goals per game on average than teams at the bottom.</p>
           <p>Hover over a team dot for exact figures.</p>
@@ -200,7 +209,7 @@
         </div>
       </div>
 
-      <div class="col-sm-7 graphicblock">
+      <div class="col-md-6 graphicblock">
         <div class="col-sm-12 graphiccontent">
           <div id="winlosschart"></div>
         </div>
