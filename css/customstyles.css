@@ -474,11 +474,16 @@ a:hover .about-button {
 
 .portfolio-item {
   border-top: 1px solid #e9e9e9;
-
   position: relative;
 }
 
-.portfolio-item a {
+.portfolio-box {
+  border: 1px solid #e9e9e9;
+  border-radius: 3px;
+  position: relative;
+}
+
+.portfolio-item a, .portfolio-box a {
   text-decoration: none;
   color: #2d2d2d;
 }
