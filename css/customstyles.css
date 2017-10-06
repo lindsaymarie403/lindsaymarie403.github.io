@@ -520,6 +520,11 @@ a:hover .about-button {
   width: 100%;
 }
 
+.progress-head {
+  padding: 10px 0px 10px 25px;
+  background-color: #e9e9e9;
+}
+
 .portfolio-headline {
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;

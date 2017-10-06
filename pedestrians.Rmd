@@ -1,0 +1,45 @@
+---
+title: "Pedestrian Fatalities in Maryland"
+author: "Lindsay Huth"
+date: "10/5/2017"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## In Maryland, where is it dangerous to be a pedestrian?
+
+This project started as an extension of a [project](http://cnsmaryland.org/2017/05/17/pedestrian-casualties-mount-in-maryland-town-as-officials-defer-action/) published last spring about pedestrian deaths in Langley Park, Maryland. 
+
+We were curious: on what other state and U.S. roads are pedestrians frequently hit, and often killed?
+
+
+## Our Data
+
+We have data on accidents involving pedestrians from the Maryland State Police. Computer science major [Jake Gluck](https://www.linkedin.com/in/jake-gluck-890013122/) and I loaded, filtered and grouped the data in R. Jake took the lead developing a clustering method in QGIS that helped us map clusters of accidents on state and U.S. roads. It's now up on [Carto](https://jagluck.carto.com/builder/3907f54c-9f09-11e7-b60c-0e538bab2938/embed?state=%7B%22map%22%3A%7B%22ne%22%3A%5B39.011714588834074%2C-77.16659545898439%5D%2C%22sw%22%3A%5B39.41073305508498%2C-76.23825073242188%5D%2C%22center%22%3A%5B39.21150723299172%2C-76.70242309570312%5D%2C%22zoom%22%3A11%7D%7D). I analyzed and clustered another data set to find names of pedestrians who have been hit -- potential sources for our reporting.
+
+## On To Reporting
+
+Our reporting team picked a few areas of interest: Ocean City, Wheaton (near the Metro) and the area in Baltimore surrounding Johns Hopkins' medical campus -- where public health researchers are investigating pedestrian safety, but pedestrians are dying right outside the researchers' offices.
+
+I'm heading the investigation into the Johns Hopkins neighborhood. I've spoken to pedestrian safety advocates to understand their concerns. Now, I'm moving on to Baltimore officials and the State Highway Administration. How is the government responding? Has SHA invested in Baltimore's state roads -- and has Baltimore requested funds for those investments? Are officials changing the speed limits or design of the roads, or are they focused on awareness campaigns to convince pedestrians to just 'be safer'?
+
+## Initial Directions
+
+Initial discussions indicate that suburban roads are often more dangerous that urban ones: speed limits are higher, roads are wider and crosswalks are farther a part, meaning people are more likely to jaywalk. D.C., a top advocate told me, is much safer than surrounding Montgomery and Prince George's County.
+
+But our data also show a high concentration of accidents in Baltimore, another urban area. This could be due to the higher population as compared to suburban areas. I'm investigating, though, how Baltimore's accident record compares to D.C.'s -- they're both urban areas, and D.C. is supposedly safe. Is Baltimore more dangerous? Why?
+
+Many of the areas pinpointed in Baltimore and around the state are also low-income neighborhoods, where people tend to walk. I'm also pulling income data from the Census Bureau to overlay on Baltimore's accident map. How does the number of accidents relate to the relatively poverty of the area? Initial research showed the state has invested in pedestrian safety in tourist-heavy Ocean City but neglected Baltimore's poorer neighborhoods. We'd like to quantify and visualize that.
+
+## Insights
+
+This project is showing me how data analysis and traditional reporting work symbiotically: you find insights in the data and bring them to sources for context, but those sources can also direct you to better questions to ask the data.
+
+I'm also refining my R skills and learning new tools like QGIS. 
+
+Stay tuned for more.
+
+
