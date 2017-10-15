@@ -262,6 +262,20 @@ a:hover .icon {
   line-height: 1.8em;
 }
 
+/*leadership styles*/
+#leader-list {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#leader-list li {
+  font-family: 'Merriweather', serif;
+  font-weight: 400;
+  color: #5b5b5b;
+  margin-right: 10px;
+  line-height: 1.8em;
+}
+
 /*share styles*/
 #share {
   margin-bottom: 40px;
