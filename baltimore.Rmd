@@ -1,7 +1,7 @@
 ---
 title: "Traffic Stops by the Baltimore Police"
 author: "Lindsay Huth"
-date: "10/5/2017"
+date: "12/10/2017"
 output: html_document
 ---
 
@@ -10,21 +10,11 @@ knitr::opts_chunk$set(echo = FALSE)
 library('knitr')
 ```
 
-## We have a consent decree. Now what?
+## Digging into the data
 
-In April 2015, 25-year-old Freddie Gray died after sustaining spinal cord injuries while in police custody.
+I'm part of a team project that's been investigating the Baltimore police department this fall. I'm the sole data journalist, so I got a head start over the summer requesting traffic stop records from the Governor's Office of Crime Control and Prevention, which receives and analyzes the records from departments across Maryland.
 
-Over a year later, an investigation of the Baltimore Police Department by the U.S. Department of Justice turned up a "pattern and practice" of discriminatory policing behavior that violated citizens' constitutional rights -- particularly those of blacks. In April 2017, the two agencies entered into a consent decree to repair the systemic issues.
-
-Now what? 
-
-Can cops change? How?
-
-I'm part of a team project -- in conjunction with an urban affairs reporting class at UMD -- investigating policing practices in Baltimore, past and present.
-
-## Digging into data
-
-My contribution: I'm the sole head of a data investigation into Baltimore's traffic stop records. I started in summer 2017, working under Maryland's Public Information Act to request the traffic stop data from its owners, the Governor's Office of Crime Control and Prevention.
+I planned to use the records to determine whether the Baltimore police stop and search minorities disproportionately to the city's population, and to compare Baltimore's patterns to other departments statewide.
 
 For each traffic stop reported by a law enforcement agency, we have fields like the driver's race and age, the stop reason, whether the officer conducted a search and whether the search turned up anything (contraband, property or both). Check out a snippet of Baltimore's stops from 2011:
 
@@ -33,9 +23,7 @@ load(file="port_balt2011.RData")
 kable(port_balt2011)
 ```
 
-I pulled Baltimore's data into RStudio and expected to find what the consent decree indicated: a higher search rate for blacks and other minorities that didn't reflect the hit rate, indicating the higher searches aren't in line with who is carrying contraband.
-
-What I found instead was messy and confusing data.
+But when I pulled the Baltimore data and began working through data quality checks, the patterns...didn't make sense. 
 
 Check out the number of stops reported by the Baltimore police each year (two years are missing because the law mandating data collection sunsetted during those years):
 
@@ -44,7 +32,7 @@ load(file="port_baltStops.RData")
 barplot(port_baltstops$V1, main="Stops Reported by Baltimore City Police", names.arg=c("2009", "2011", "2012", "2013", "2015"), ylab="Stops")
 ```
 
-The department reported just 4,410 stops in 2009 -- and over 80,000 in 2013. I also calculated at the search rate (percent of stopped drivers that officers search) and the hit rate (the percent of searches that are 'successful,' turning up contraband, property or both) for each year. Both were erratic, too. Here's a look at the hit rate:
+The data show just 4,410 stops in 2009 -- and over 80,000 in 2013. I also calculated at the search rate (percent of stopped drivers that officers search) and the hit rate (the percent of searches that are 'successful,' turning up contraband, property or both) for each year. Both were erratic, too. Here's a look at the hit rate:
 
 ```{r echo = FALSE}
 load(file="port_baltsearches.RData")
@@ -52,6 +40,10 @@ barplot(port_baltsearches$V1, main="Hit Rates for Baltimore City Police's Traffi
 ```
 
 The department reported just 36 searches in 2009, and zero hits.
+
+I immediately began talking to sources: the data analyst at the Governor's Office, the data and compliance officials at the Baltimore police department, researchers who helped set up the data collection system and the state delegates who sponsored the bill that mandates this data be collected.
+
+No one could explain the patterns I was seeing. But no one thought they represented actual policing practices. The problem, it became apparent, was the data collection.
 
 For contrast, I pulled data from the region one source pointed to as the model for high-tech, data-driven policing: Los Angeles. The California data was available from the Stanford Open Policing Project, and I parsed out the stops from the county (individual departments weren't given). Unlike Baltimore, the stop numbers and search rates are remarkably consistent:
 
@@ -65,11 +57,11 @@ load(file="port_lahit.RData")
 barplot(lahit$HitRate, main="Hit Rates Reported for Los Angeles County Traffic Stops",names.arg=lahit$Year, ylim=c(0,10), ylab="Hit Rate (Percent)")
 ```
 
-## What's happening with our Baltimore data?
+I learned that Baltimore's technology lags behind the rest of the state: rather than reporting their stops electronically through computers in its cars, Baltimore officers fill out paper reports, which are manually entered into computers by other officers too injured for patrolling, sometimes month laters.
 
-I circled back with the Governor's Office and the Baltimore police. Baltimore's data, I figured, was less reliable than the rest of the state's. My sources told me it's the only department, after all, that doesn't report its stops electronically through computers in its cars; instead, officers fill out paper reports, which are later manually entered by other officers too injured for patrolling.
+The Baltimore police are under consent decree, and the last year's Department of Justice investigation found that large numbers of stops and searches were absent from police records. When officers did report stops, “they do not consistently record important information connected to it,” the Justice Department report noted.
 
-For comparison, I pulled data from other departments, large and small, across Maryland. But instead of seeing order, like the LA stops, each Maryland department had its own confusing pattern of stops, searches and hits. Here are stop numbers from a sampling of departments:
+I wondered if this was a Baltimore-specific problem. I pulled data from other departments, large and small, across Maryland. But instead of seeing order, like the LA stops, each Maryland department had its own confusing pattern of stops, searches and hits. Here are stop numbers from a sampling of departments:
 
 ```{r echo=FALSE}
 load("port_mocostops.RData")
@@ -86,17 +78,11 @@ load("port_ncstops.RData")
 barplot(port_ncstops$V1, main="Stops Reported by New Carrollton Police", ylab="Stops", names.arg=c("2009", "2011", "2012", "2013", "2015"))
 ```
 
-I've reached out to representatives from each department, and the ones I've spoken with have said the data don't make sense and don't seem reliable -- but they're not sure why.
+I have talked to officials from these departments, and they have said the data don't make sense and don't seem reliable -- but they're not sure why. All of my sources have told me -- and my independent analysis has confirmed -- that the huge, unexplained changes in stops, searches and hits indicate the data is incomplete and unreliable for analysis.
 
-I've also spoken to researchers and open data advocates who have accessed the data, as well as a former legislator who sponsored the most recent version of the bill that mandated the data collection.
+That's a problem. All departments are required to report this data to enable the state to pinpoint which departments engage in racial profiling. The original law, passed 16 years ago, came out of a settlement between the Maryland State Police and Robert Wilkins, a black attorney who sued the department for stopping him because of his race. The law is supposed to have a chilling effect on racial profiling, but with incomplete data, it doesn't.
 
-## I don't have answers yet.
-
-But the goal is to understand the system behind the data: why do these discrepancies exist? What does this mean for Baltimore as it tries to reform its policing patterns under the consent decree? How can the public know what's happening in police departments when data aren't being accurately reported? And how can police reform without knowing where the problems exist?
-
-Stay tuned. I'll eventually write about the impact of technology, past and present, on policing. And I'll use my design and web development background to build a timeline covering the history of police in Baltimore (forking the Knight Lab's timeline.js). We have a whole team of reporters working on other aspects of policing in Baltimore, and I'll build the entire site that houses our multiplatform, many-part project.
-
-In the meantime, I'll keep making calls and sorting through data.
+My story on this issue is nearly complete and will be published by the end of December. Stay tuned.
 
 
 ##
