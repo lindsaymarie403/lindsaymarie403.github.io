@@ -78,6 +78,7 @@ li a {
 
 #hero {
   width: 100%;
+  position: relative;
   margin: -100px 0px 0px 0px;
 }
 
