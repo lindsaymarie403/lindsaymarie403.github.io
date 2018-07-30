@@ -194,6 +194,21 @@ li a {
   font-weight: 700;
 }
 
+/*adding new chart styles to accommodate d3*/
+.chart-sub, .chart-source, #chart-one {
+  margin-left: 20px;
+  font-family: 'PT Sans', sans-serif;
+}
+
+.chart-sub {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.chart-source {
+  font-size: .8em;
+}
+
 /**keeps first chart from disappearing**/
 #chart-ne {
   display: none;
