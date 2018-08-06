@@ -468,6 +468,7 @@ a:hover .about-button {
 }
 
 /**new portfolio styles**/
+
 #cat-tag {
   font-family: 'Lato', sans-serif;
   font-size: 1.1em;
@@ -479,7 +480,7 @@ a:hover .about-button {
 }
 
 .portfolio-block {
-  padding: 0px 15px 0px 15px;
+  padding: 35px 15px 0px 15px;
 }
 
 .portfolio-block .col-sm-6 {
@@ -495,6 +496,7 @@ a:hover .about-button {
   border: 1px solid #e9e9e9;
   border-radius: 3px;
   position: relative;
+  padding: 0px;
 }
 
 .portfolio-item a, .portfolio-box a {
@@ -555,7 +557,7 @@ a:hover .about-button {
 .portfolio-explanation {
   font-family: 'Lato', sans-serif;
   font-size: .95em;
-  padding: 10px 0px 25px 0px;
+  padding: 10px 0px 25px 30px;
   margin-top: 15px;
   color: #5b5b5b;
   line-height: 1.5em;
