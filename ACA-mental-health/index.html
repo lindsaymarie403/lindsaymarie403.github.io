@@ -602,7 +602,7 @@
     // Add the y Axis
     svg3.append("g")
       .style("font-family", "'PT Sans'")
-        .call(d3.axisLeft(y3).tickFormat(d3.format(".0%")));
+        .call(d3.axisLeft(y3).tickFormat(d3.format(".0%")).ticks(5));
 
     // text label for the y axis
     svg3.append("text")

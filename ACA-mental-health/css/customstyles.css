@@ -195,7 +195,7 @@ li a {
 }
 
 /*adding new chart styles to accommodate d3*/
-.chart-sub, .chart-source, #chart-one {
+.chart-sub, .chart-source, #chart-one, #chart-two {
   margin-left: 20px;
   font-family: 'PT Sans', sans-serif;
 }
