@@ -9,7 +9,7 @@
 <!-- load the d3.js library -->
 <script src="https://d3js.org/d3.v4.min.js"></script>
 
-<!--chart one-->
+<!--chart two-->
 <script>
 // set the dimensions and margins of the graph
 var margin = {top: 20, right: 20, bottom: 40, left: 60},
@@ -53,7 +53,7 @@ d3.csv("chart2.csv", function(error, data) {
   });
 
   // Scale the range of the data
-  x.domain([2004.8, 2009.2]);
+  x.domain([2004.5, 2009.5]);
   y.domain([0, 1]);
 
   // Add the valueline path.
@@ -76,7 +76,7 @@ d3.csv("chart2.csv", function(error, data) {
   svg.append("g")
       .attr("transform", "translate(0," + height + ")")
       .style("font-family", "'PT Sans'")
-      .call(d3.axisBottom(x).tickFormat(d3.format("d")).ticks(5));
+      .call(d3.axisBottom(x).tickValues([2005,2009]).tickFormat(d3.format("d")).ticks(5));
 
   // text label for the x axis
   svg.append("text")
