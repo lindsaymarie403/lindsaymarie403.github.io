@@ -722,4 +722,7 @@ a:hover .about-button {
   .share-slash {
     display: none !IMPORTANT;
   }
+  .portfolio-explanation {
+    padding-left: 0px;
+  }
 }
