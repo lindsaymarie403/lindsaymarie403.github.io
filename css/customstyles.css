@@ -543,7 +543,9 @@ a:hover .about-button {
 
 .portfolio-headline {
   font-family: 'Merriweather', serif;
-  font-size: 1.1em;
+  font-size: 1.15em;
+  /*font-weight: 700;*/
+  /*color: #23232d;*/
 }
 
 .portfolio-sub {
