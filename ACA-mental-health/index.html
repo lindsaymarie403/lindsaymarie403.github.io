@@ -175,7 +175,15 @@
           <div class="chart-description">
             <p>Insurance companies don't update their network listings, meaning many psychiatrists listed are unreachable or not even psychiatrists. Others are not accepting the insurance listed or not taking new patients, making the task of making a psychiatric appointment onerous.</p>
           </div>
+          <p class="chart-sub">Status of Psychiatrists Listed on Insurance Networks</p>
+          <p class="chart-text">Start with the 1,154 psychiatrists in the networks of the insurers on the Maryland Health Connection, and remove those that are...</p>
+          <button type="button" class="btn btn-light btn-sm aca-button">Unreachable</button>
+          <button type="button" class="btn btn-light btn-sm aca-button">Not psychiatrists</button>
+          <button type="button" class="btn btn-light btn-sm aca-button">Not accepting listed insurance</button>
+          <button type="button" class="btn btn-light btn-sm aca-button">Not accepting new patients</button>
+          <button type="button" class="btn btn-light btn-sm aca-button">Not available in next 45 days</button>
           <div id="chart-three"></div>
+          <p class="chart-source">Source: Mental Health Association of Maryland</p>
         </div>
       </div>
 
@@ -719,6 +727,83 @@
 
   <!--chart three-->
   <script>
+  // set the dimensions and margins of the graph
+  var margin4 = {top: 10, right: 20, bottom: 20, left: 20},
+      width4 = 500 - margin4.left - margin4.right,
+      height4 = 250 - margin4.top - margin4.bottom;
+
+  var svg4 = d3.select("#chart-three").append("svg")
+      .attr("width", width4 + margin4.left + margin4.right)
+      .attr("height", height4 + margin4.top + margin4.bottom)
+      .call(responsivefy3)
+    .append("g")
+      .attr("transform",
+            "translate(" + margin4.left + "," + margin4.top + ")");
+
+  // set the ranges
+  var x4 = d3.scaleLinear().range([0, width4]);
+  var y4 = d3.scaleLinear().range([height4, 0]);
+
+  // Get the data
+  d3.csv("chart3.csv", function(error, data) {
+    if (error) throw error;
+
+    // format the data
+    data.forEach(function(d) {
+        d.coorx = +d.coorx;
+        d.coory = +d.coory;
+    });
+
+    // Scale the range of the data
+    x4.domain([1, 420]);
+    y4.domain([1, 211]);
+
+    // Append a circle for each datapoint on valueline3
+    svg4.selectAll(".dot4")
+        .data(data)
+      .enter().append("circle") // Uses the enter().append() method
+        .attr("class", "dot4") // Assign a class for sty3ling
+        .attr("cx", function(d) { return x4(d.coorx); })
+        .attr("cy", function(d) { return y4(d.coory); })
+        .attr("r", 3)
+        .style("fill", "#7cc0c9");
+
+    // formatter
+    var f3 = d3.format(".1%")
+
+  });
+
+  function responsivefy3(svg) {
+    // get container + svg aspect ratio
+    var container = d3.select(svg.node().parentNode),
+        width4 = parseInt(svg.style("width")),
+        height4 = parseInt(svg.style("height")),
+        aspect = width4 / height4;
+
+    // add viewBox and preserveAspectRatio properties,
+    // and call resize so that svg resizes on inital page load
+    svg.attr("viewBox", "0 0 " + width4 + " " + height4)
+        .attr("preserveAspectRatio", "xMinYMid")
+        .call(resize);
+
+    // to register multiple listeners for same event type,
+    // you need to add namespace, i.e., 'click.foo'
+    // necessary if you call invoke this function for multiple svgs
+    // api docs: https://github.com/mbostock/d3/wiki/Selections#on
+    d3.select(window).on("resize." + container.attr("id"), resize);
+
+    // get width of container and resize svg to fit it
+    function resize() {
+        var targetWidth = parseInt(container.style("width"));
+        svg.attr("width", targetWidth);
+        svg.attr("height", Math.round(targetWidth / aspect));
+    }
+  }
+
+  </script>
+
+  <!--old chart three
+  <script>
       Highcharts.chart('chart-three', {
         chart: {
             type: 'bar'
@@ -777,6 +862,7 @@
         }]
     });
   </script>
+-->
 
   <!--chart five-->
   <script>

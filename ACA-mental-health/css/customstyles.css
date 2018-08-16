@@ -195,7 +195,7 @@ li a {
 }
 
 /*adding new chart styles to accommodate d3*/
-.chart-sub, .chart-source, #chart-one, #chart-two {
+.chart-sub, .chart-text, .chart-source, .aca-button, #chart-one, #chart-two {
   margin-left: 20px;
   font-family: 'PT Sans', sans-serif;
 }
@@ -203,6 +203,10 @@ li a {
 .chart-sub {
   font-size: 1em;
   font-weight: 700;
+}
+
+.chart-text {
+  font-weight: 400;
 }
 
 .chart-source {
