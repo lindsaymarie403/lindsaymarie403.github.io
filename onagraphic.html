@@ -32,6 +32,10 @@ h3 {
   color: #777777;
 }
 
+.highlight {
+  font-weight: 700;
+}
+
 
 </style>
 <body>
@@ -41,7 +45,7 @@ h3 {
   <h2>Percent of speakers at most recent three conferences who also presented at last three ONAs</h2>
   <svg></svg>
   <h3>Source: Conference websites</h3>
-  <h3>Note: Data includes most recent three conferences for which speaker lists were available. Some 2018 conferences are still upcoming. Journalism Interactive's speaker list was not available for 2016, so the data includes 2017, 2015 and 2014.</h3>
+  <h3>Note: Data includes most recent three conferences for which speaker lists were available. Some 2018 conferences are still upcoming.</h3> <h3>*Journalism Interactive's speaker list was not available for 2016, so the data includes 2017, 2015 and 2014.</h3>
 </div>
 
 <script src="https://d3js.org/d3.v4.min.js"></script>
@@ -117,10 +121,24 @@ var svg = d3.select("svg")
       .attr("font-size", "11px")
       .attr("font-family","Source Sans Pro");
 
-  var xAxis = d3.axisBottom(x).ticks(5).tickSize(0).tickPadding(10) .tickFormat(d => d + "%");
+  svg.append("text")
+    .attr("class","asterisk")
+    .attr("x", (x(20.7) + 30))
+    .attr("y", (y("Journalism Interactive")+ 20))
+    .text("*")
+    .attr("font-size",".7em");
+
+  var tickLabels = ['0','10%','20%','30%','40%','50%']
+
+  var xAxis = d3.axisBottom(x)
+  .ticks(5)
+  .tickSize(0)
+  .tickPadding(10)
+  .tickFormat(function(d,i){ return tickLabels[i] });
 
   // add the x Axis
   svg.append("g")
+      .data(data)
       .attr("class","xaxis")
       .attr("transform", "translate(0," + height + ")")
       .style("font-family","Source Sans Pro")
@@ -132,6 +150,10 @@ var svg = d3.select("svg")
       .style("font-family","Source Sans Pro")
       .style("font-size","11px")
       .call(d3.axisLeft(y).tickSize(0).tickPadding(10));
+
+  d3.selectAll('g.tick')
+    .filter(function(d){ return d=="MobileMe&You";} )
+    .style('font-weight', "700");
 
   document.addEventListener("DOMContentLoaded", resize);
   d3.select(window).on('resize', resize);
@@ -157,6 +179,9 @@ var svg = d3.select("svg")
     svg.selectAll(".label")
       .attr("x", (function(d) { return x(d.sales) + 20; }  ))
       .attr("dy", ".75em");
+
+    svg.selectAll(".asterisk")
+      .attr("x", (x(20.7) + 30));
 
     d3.select(svg.node().parentNode)
         .attr('width', (width + margin.left + margin.right) + 'px');
