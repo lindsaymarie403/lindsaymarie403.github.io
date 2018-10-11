@@ -11,10 +11,10 @@
     <link rel="icon" href="../../favicon.ico">
 
     <!--meta tags for FB and Twitter sharing-->
-    <meta property="og:title" content="Lindsay Huth - Data Journalist"/>
-    <meta property="og:url" content="https://lindsaymarie403.github.io/index.html"/>
+    <meta property="og:title" content="Lindsay Huth - Graphics Reporter"/>
+    <meta property="og:url" content="https://lindsaymarie403.github.io/portfolio.html"/>
     <meta property="og:description" content="I'm a journalism graduate student at the University of Maryland, where I'm using my coding chops and design background to tell compelling stories."/>
-    <meta property="og:image" content="http://lindsaymarie403.github.io/meta_about.png"/>
+    <meta property="og:image" content="http://lindsaymarie403.github.io/meta_portfolio.png"/>
 
     <title>Lindsay Huth</title>
 
@@ -25,7 +25,10 @@
     <!--Put all of your custom styles in here.  Notice it comes below the core boostrap.min.css (core files). The order is important-->
      <link href="css/customstyles.css" rel="stylesheet">
 
-     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900|Merriweather:400,400i,700" rel="stylesheet">
+     <!--lightbox stylesheet-->
+     <link href="css/lightbox.css" rel="stylesheet">
+
+     <link href="https://fonts.googleapis.com/css?family=Lato:400,400i,700,900|Merriweather:400,400i,700" rel="stylesheet">
 
     <!-- These are special files that make all the fancy new stuff work in older versions of Internet Explorer-->
     <!--[if lt IE 9]>
@@ -46,13 +49,13 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Lindsay Huth</a>
+          <a class="navbar-brand" href="index.html">Lindsay Huth</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="#">About</a></li>
+            <li class="active"><a href="#">Work</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="resume.html">Resume</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -81,116 +84,232 @@
         </div>
       </div>
 
-      <div id="about-content">
+      <div id="resume">
 
-        <!--about me-->
-        <div class="row">
-          <div class="col-xs-12 bio">
-            <p id="bio-tag">About Me</p>
-            I'm a journalism graduate student at the University of Maryland, where I'm using my coding chops and design background to tell compelling stories. I specialize in data journalism, investigative reporting and interactive design and development, covering topics like the <a href="https://lindsaymarie403.github.io/ACA-mental-health/index.html" target="_blank">Affordable Care Act</a> and <a href="http://cnsmaryland.org/baltimore-police/">policing in Baltimore</a>. Previously, I studied visual communication design and psychology at the University of Notre Dame, where I graduated magna cum laude, and worked in design and communications roles at newspapers, nonprofits, schools, design firms and businesses. I'm passionate about projects that serve the public good, and I love a good quiche.
+        <!--data items-->
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://cnsmaryland.org/interactives/fall-2018/books-movies/index.html" target="_blank">
+            <div class="data-thumbnail"><img src="assets/movies.jpg"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Books and Their Movies</div>
+            <div class="portfolio-sub">Website, graphics, data, story</div>
+            When a book becomes a movie, how are book sales affected? I analyzed the New York Times Best Sellers List (via the NYT Books API) to find out.
+            <div class="portfolio-tools">Tools: D3.js, jQuery, Python/pandas, HTML/CSS, Photoshop, Excel</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/movies-and-their-books" target="_blank">View the code</a></div>
           </div>
         </div>
 
-        <!--buttons to jump sections-->
-        <div class="row" id="button-section">
-          <div class="col-sm-6 button">
-            <a href="portfolio.html">
-              <div class="about-button" id="portfolio-button">
-              My Work
-              </div>
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://cnsmaryland.org/2018/09/06/trump-is-using-pardons-differently-than-his-predecessors-data-show/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/pardons.png"></div>
             </a>
           </div>
-          <div class="col-sm-6 button">
-            <a href="resume.html">
-              <div class="about-button" id="resume-button">
-              My Experience
-              </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Presidential Pardons</div>
+            <div class="portfolio-sub">Graphics, data, story</div>
+            Trump isn't using his pardoning power like past presidents, and we have the data to prove it.
+            <div class="portfolio-tools">Tools: D3.js, Python/pandas</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/presidential-pardons" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://cnsmaryland.org/pedestrian-accidents-pile-up-on-maryland-roads/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/pedestrian.png"></div>
             </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Pedestrian Casualties</div>
+            <div class="portfolio-sub">Website, graphics, data, story</div>
+            I worked on a small team that used Maryland accident records to analyze pedestrian fatalities on state roads. I presented the findings using words and graphics on a custom-built webpage. The story was a finalist for a student <a href="https://ire.org/awards/ire-awards/winners/2017-ire-award-winners/" target="_blank">IRE Award</a> and an <a href="http://spjdc.org/2018/06/winners-dateline-awards-2017-journalism-announced/" target="_blank">SPJ D.C. Pro Dateline Award</a>, and it served as the basis for a <a href="https://www.washingtonpost.com/opinions/unsafe-maryland/2018/03/23/6512d242-2bb8-11e8-b0b0-f706877db618_story.html?utm_term=.661f7b671942" target="_blank">Washington Post op-ed</a>.
+            <div class="portfolio-tools">Tools: R, HTML/CSS, Illustrator</div>
+          </div>
+        </div>
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://www.flatlandkc.org/news-issues/kansas-city-car-auction/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/carauction.gif"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Kansas City Car Auction</div>
+            <div class="portfolio-sub">Graphics, data, story</div>
+            Interested buyers flood the Kansas City Tow Lot each month for their chance to bid on the hundreds of vehicles that have come into the city's custody. I analyzed the 5,200 cars auctioned off in the last year and built interactives.
+            <div class="portfolio-tools">Tools: D3.js, HTML/CSS, Excel</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/kc-car-auction" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+        <!--
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="ACA-mental-health/index.html" target="_blank">
+            <div class="data-thumbnail"><img src="aca.jpg"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Barriers to Care</div>
+            <div class="portfolio-sub">Graphics and web developer, reporter</div>
+            How has mental health care changed in Maryland since Obamacare? I dug into data, spoke to psychiatrists and advocates, created graphics and maps and built the story's site.
+            <div class="portfolio-tools">Tools: D3.js, jQuery, HTML/CSS, Bootstrap</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/lindsaymarie403.github.io/tree/master/ACA-mental-health" target="_blank">View the code</a></div>
+          </div>
+        </div>
+      -->
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://www.flatlandkc.org/news-issues/cover-story/rural-hungry/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/hunger.png"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Rural and Hungry</div>
+            <div class="portfolio-sub">Data, maps, story, photos</div>
+            The government runs summer meal sites to feed kids who get free or reduced-price lunch during school. But when I mapped and analyzed the locations of those sites, I found that they're out of reach for many rural kids.
+            <div class="portfolio-tools">Tools: QGIS, Illustrator, Python</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/hunger-in-KC" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+        <!--
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://www.flatlandkc.org/curiouskc/migration-patterns-kansas-city/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/map.png"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Is Kansas City's Population Growing?</div>
+            <div class="portfolio-sub">Graphics, data, story</div>
+            A reader asked whether Kansas City is growing, so I gathered the Census data, graphed and mapped it and explained the trends.
+            <div class="portfolio-tools">Tools: D3.js, Excel, Illustrator</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/migration-into-KC" target="_blank">View the code</a></div>
+          </div>
+        </div>
+      -->
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="https://www.usnews.com/news/national-news/articles/2018-04-19/patient-shortage-erodes-military-surgeons-skills-preparedness-for-war" target="_blank">
+            <div class="data-thumbnail"><img src="assets/hospitals2.png"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Safety in Numbers</div>
+            <div class="portfolio-sub">Data, graphics</div>
+            I partnered with a seasoned investigative reporter and analyzed data on volumes of high-risk procedures performed by military hospitals. I found that many counts are dangerously low and created graphics displaying the results.
+            <div class="portfolio-tools">Tools: Excel, Illustrator</div>
+          </div>
+        </div>
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="https://newsroom18.journalists.org/2018/09/15/liked-ona18-data-show-conferences-similar/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/ona.png"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Liked ONA? Data shows which conferences to attend next</div>
+            <div class="portfolio-sub">Data, graphics, story</div>
+            As a reporter in the ONA18 Student Newsroom, I collected data on speakers at various digital journalism conferences and compared them to ONA's speaker list. Which conferences stand out, and which are most similar to ONA?
+            <div class="portfolio-tools">Tools: D3.js, Python, Excel</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/ona-attendees" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://cnsmaryland.org/baltimore-police/" target="_blank">
+            <div class="data-thumbnail"><img src="assets/baltimore.gif"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Reforming the Force</div>
+            <div class="portfolio-sub">Website, interactives, data, story</div>
+            I worked on a team investigating the Baltimore police's efforts to reform corrupt practices. I reported a data-driven story using traffic stop records requested from the state and then designed and built the site and interactives for the series.
+            <div class="portfolio-tools">Tools: R, JavaScript, HTML/CSS</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/baltimore" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+        <div class="row row-eq-height portfolio-block">
+          <div class="col-sm-6 portfolio-box">
+            <a href="http://cnsmaryland.org/interactives/spring-2018/plea-bargain/index.html" target="_blank">
+            <div class="data-thumbnail"><img src="pleabargain.jpg"></div>
+            </a>
+          </div>
+          <div class="col-sm-6 portfolio-explanation">
+            <div class="portfolio-headline">Trading Away Justice</div>
+            <div class="portfolio-sub">Website, data, graphics</div>
+            What happens when defendants plead guilty to crimes they didn't commit? I performed all data analysis and designed and built the site and graphics and presented this project at the <a href="https://ire.org/events-and-training/event/3190/3819/" target="_blank">2018 IRE Conference</a>.
+            <div class="portfolio-tools">Tools: SQL, HTML/CSS, Bootstrap, Illustrator</div>
+            <div class="portfolio-sub"><a href="https://github.com/lindsaymarie403/plea-bargain" target="_blank">View the code</a></div>
+          </div>
+        </div>
+
+<!--
+            <div class="col-sm-6">
+              <div class="portfolio-box">
+                <a href="kingcakes.html" target="_blank">
+                  <div class="data-thumbnail"><img src="mockups_652-09.png"></div>
+                  <div class="portfolio-description">
+                    <div class="portfolio-headline">King Cake Field Guide</div>
+                    <div class="portfolio-lede">
+                      If you’re in Lake Charles during Mardi Gras season, you’re within 3.46 miles of a king cake. The American Press contacted nearly 100 bakeries, stores and cafes and found 35 that sell the seasonal treat.
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="portfolio-explanation">
+                <span class="my-take">My Take:</span>
+                This project started as a simple task: write about king cakes for Mardi Gras season in southwest Louisiana. But I took a data angle to the story, calling locations listed on Yelp to compile a near-complete list of king cake purveyers. I created an illustrated map of locations and reported the adjoining story.
+              </div>
+            </div>
+
+            -->
+
           </div>
         </div>
 
       </div>
 
+    </div><!--close container-->
+
       <!--share this resume-->
+      <!--
       <div class="container" id="share">
         <div class="row">
           <div class="col-12-xs"
             <ul id="share-list">
-              <li><span id="share-title">Share This Site</span></li>
-              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//lindsaymarie403.github.io/index.html&title=Data%20Journalist%20-%20Lindsay%20Huth&summary=&source=" target="_blank">on LinkedIn</a></li>
+              <li><span id="share-title">Share This Portfolio</span></li>
+              <li><a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A//lindsaymarie403.github.io/portfolio.html&title=Lindsay%20Huth%20-%20Data%20Journalist&summary=&source=" target="_blank">on LinkedIn</a></li>
               <li class="share-slash">/</li>
-              <li><a href="https://twitter.com/home?status=Check%20out%20this%20great%20data%20journalist%3A%20https%3A//lindsaymarie403.github.io/index.html" target="_blank">on Twitter</a></li>
+              <li><a href="https://twitter.com/home?status=Check%20out%20this%20awesome%20data%20journalist%3A%20https%3A//lindsaymarie403.github.io/portfolio.html" target="_blank">on Twitter</a></li>
               <li class="share-slash">/</li>
-              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//lindsaymarie403.github.io/index.html" target="_blank">on Facebook</a></li>
+              <li><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A//lindsaymarie403.github.io/portfolio.html" target="_blank">on Facebook</a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      </div><!-- /.container -->
-
-
-
-    <!--'The Thing I'm...' section (could embed goodreads/spotify later)-->
-    <div id="activities">
-
-      <div class="row container" id="activities-row">
-
-        <div class="col-xs-12" id="activities-tag">The Things I'm...</div>
-
-        <div class="col-sm-4 activity">
-          <div class="activity-name">Reading</div>
-          <div class="activity-text">
-            <a href="https://www.goodreads.com/book/show/28695425-strangers-in-their-own-land" target="_blank">
-              <!--split into two spans to control hover state colors separately-->
-              <span class="title">Strangers in Their Own Land: Anger and Mourning on the American Right</span><span class="author"> by Arlie Russell Hochschild</span>
-            </a>
-          </div>
-          <div class="activity-text">
-            <a href="https://www.goodreads.com/book/show/32814676-the-mighty-franks" target="_blank">
-              <span class="title">The Mighty Franks</span><span class="author"> by Michael Frank</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-sm-4 activity">
-          <div class="activity-name">Writing</div>
-          <div class="activity-text">
-            <a href="http://takomavoice.com/2017/07/06/syrian-refugees-revel-takoma-parks-parade/" target="_blank">
-              <span class="title">Syrian refugees revel in Takoma Park's parade</span><span class="author"> in the Takoma Voice</span>
-            </a>
-          </div>
-          <div class="activity-text">
-            <a href="http://takomavoice.com/2017/06/20/dual-lawsuits-target-trumps-business-empire/" target="_blank">
-              <span class="title">Dual lawsuits target Trump's business empire</span><span class="author"> in the Takoma Voice</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="col-sm-4 activity">
-          <div class="activity-name">Listening to</div>
-          <div class="activity-text">
-            <a href="https://open.spotify.com/album/72xhsdVmVWFXJuSjABjqtC" target="_blank">
-              <span class="title">Blossom</span><span class="author"> by Milky Chance</span>
-            </a>
-          </div>
-          <div class="activity-text">
-            <a href="https://open.spotify.com/album/2zbTrm2pIAErzFSopinkbN" target="_blank">
-              <span class="title">Cleopatra</span><span class="author"> by The Lumineers</span>
-            </a>
-          </div>
-        </div>
+      -->
 
       </div>
 
-    </div>
+      </div><!-- /.container -->
+
 
     <!--footer-->
 
     <div id="footer">
 
       <div class="row container">
-        <div class="col-sm-6" id="copyright">Copyright &copy; 2017 Lindsay Huth</div>
+        <div class="col-sm-6" id="copyright">Copyright &copy; 2018 Lindsay Huth</div>
         <div class="col-sm-6" id="built">Built with Bootstrap, Atom and Github</div>
       </div>
 
@@ -207,5 +326,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <!--lightbox script-->
+    <script src="js/lightbox/lightbox-plus-jquery.js"></script>
   </body>
 </html>
